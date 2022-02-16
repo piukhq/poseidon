@@ -18,9 +18,42 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "Bink_${android.defaultConfig.versionName}_${variant.buildType.name}.apk"
+                }
+            }
         }
+
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "Bink_${android.defaultConfig.versionName}_${variant.buildType.name}.apk"
+                }
+            }
+        }
+
+        beta {
+        debuggable true
+        applicationIdSuffix ".beta"
+//      Add appropriate signing config
+//      signingConfig signingConfigs.binkSigningConfig
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "Bink_${android.defaultConfig.versionName}_${variant.buildType.name}.apk"
+            }
+        }
+        ext.betaDistributionGroupAliases = "internal-testing"
+        ext.betaDistributionNotifications = true
+    }
+
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
