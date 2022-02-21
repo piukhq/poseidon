@@ -13,4 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-/src/main/cpp/lib.cpp
+#/src/main/cpp/lib.cpp
