@@ -22,7 +22,6 @@ object LocalStoreUtils {
         )
     }
 
-
     fun setAppSharedPref(secretKey: String, secret: String) {
         try {
             encryptedSharedPreferences.edit().let {
@@ -50,5 +49,4 @@ object LocalStoreUtils {
             it.apply()
         }
     }
-
 }
