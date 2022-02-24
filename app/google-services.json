@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "345451212762",
+    "project_id": "localhero-7db03",
+    "storage_bucket": "localhero-7db03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345451212762:android:fea74b644bec0f469c9ae3",
+        "android_client_info": {
+          "package_name": "com.bink.localhero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345451212762-fm5lom8pup239l46hgh4d4n72kv7qoai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_glHNHfR6LiE7Hjj2HDvixGazGfKSzno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345451212762-fm5lom8pup239l46hgh4d4n72kv7qoai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
