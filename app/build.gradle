@@ -75,7 +75,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def nav_version = "2.4.1"
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -92,5 +91,12 @@ dependencies {
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Splash api
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
+
+    //Barcode scanner
+    implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
+    implementation 'com.google.zxing:core:3.3.0'
 
 }
