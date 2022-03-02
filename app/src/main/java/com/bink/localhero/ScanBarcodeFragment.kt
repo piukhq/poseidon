@@ -48,6 +48,7 @@ class ScanBarcodeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        launchScanner()
     }
 
     private fun launchScanner(){

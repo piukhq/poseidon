@@ -25,5 +25,6 @@ class SplashFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
     }
 }
