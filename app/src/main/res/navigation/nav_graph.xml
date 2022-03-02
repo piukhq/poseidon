@@ -18,5 +18,14 @@
         android:id="@+id/loginFragment"
         android:name="com.bink.localhero.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_scanBarcodeFragment"
+            app:destination="@id/scanBarcodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanBarcodeFragment"
+        android:name="com.bink.localhero.ScanBarcodeFragment"
+        android:label="fragment_scan_barcode"
+        tools:layout="@layout/fragment_scan_barcode" />
 </navigation>
