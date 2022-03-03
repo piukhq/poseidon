@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
@@ -18,6 +20,8 @@ class ScanBarcodeFragment : Fragment() {
             if (originalIntent == null) {
                 Log.d("MainActivity", "Cancelled scan")
                 Toast.makeText(requireContext(), "Cancelled", Toast.LENGTH_LONG).show()
+                findNavController().popBackStack()
+
             } else if (originalIntent.hasExtra(Intents.Scan.MISSING_CAMERA_PERMISSION)) {
                 Log.d("MainActivity", "Cancelled scan due to missing camera permission")
                 Toast.makeText(
@@ -53,7 +57,9 @@ class ScanBarcodeFragment : Fragment() {
 
     private fun launchScanner(){
         val scanOption = ScanOptions()
-        scanOption.setOrientationLocked(true)
+        scanOption.setOrientationLocked(false)
         scanLauncher.launch(scanOption)
     }
+
+
 }

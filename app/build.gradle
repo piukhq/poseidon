@@ -78,6 +78,12 @@ android {
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def nav_version = "2.4.1"
+    def retrofit_version = "2.9.0"
+    def moshi_version = "1.12.0"
+    def koin_version = "3.1.5"
+    def lifecycle_version = "2.4.1"
+    def coroutines_version = "1.6.0"
+
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -94,11 +100,28 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    //ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    //Kotlin coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
+
     //Splash api
     implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
 
     //Barcode scanner
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
     implementation 'com.google.zxing:core:3.3.0'
+
+    // retrofit & moshi
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation("com.squareup.okhttp3:logging-interceptor:3.14.2")
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation("com.squareup.moshi:moshi-kotlin:$moshi_version")
+
+    //Koin
+    implementation "io.insert-koin:koin-android:$koin_version"
+
 
 }
