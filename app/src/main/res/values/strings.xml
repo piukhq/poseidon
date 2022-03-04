@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Local Hero</string>
+    <string name="add_payment_card">Add Payment Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="nickname">Nickname</string>
+    <string name="expiry">Expiry</string>
 </resources>

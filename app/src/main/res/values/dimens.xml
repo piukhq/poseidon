@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="payment_card_add_field_height">56dp</dimen>
+    <dimen name="add_payment_card_field_bottom_margin">16dp</dimen>
+    <dimen name="add_payment_card_layout_margin">19dp</dimen>
+    <dimen name="add_payment_card_button_bottom_margin">64dp</dimen>
+</resources>
