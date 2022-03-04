@@ -5,5 +5,5 @@ object Keys {
         System.loadLibrary("native-lib")
     }
 
-    external fun testApiKey():String
+    external fun testApiKey(): String
 }

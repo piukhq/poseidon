@@ -1,19 +1,27 @@
-package com.bink.localhero
+package com.bink.localhero.views.scan_barcode
 
-import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.addCallback
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bink.localhero.base.LocalHeroFragment
+import com.bink.localhero.databinding.FragmentScanBarcodeBinding
 import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ScanBarcodeFragment : Fragment() {
+class ScanBarcodeFragment : LocalHeroFragment<ScanBarcodeViewModel, FragmentScanBarcodeBinding>() {
+
+    override val bindingInflater: (LayoutInflater) -> FragmentScanBarcodeBinding
+        get() = FragmentScanBarcodeBinding::inflate
+
+    override val viewModel: ScanBarcodeViewModel by viewModel()
+
+    override fun setup() {
+        launchScanner()
+    }
+
     private val scanLauncher = registerForActivityResult(ScanContract()) { result ->
         if (result.contents == null) {
             val originalIntent = result.originalIntent
@@ -37,25 +45,7 @@ class ScanBarcodeFragment : Fragment() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scan_barcode, container, false)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        launchScanner()
-    }
-
-    private fun launchScanner(){
+    private fun launchScanner() {
         val scanOption = ScanOptions()
         scanOption.setOrientationLocked(false)
         scanLauncher.launch(scanOption)
