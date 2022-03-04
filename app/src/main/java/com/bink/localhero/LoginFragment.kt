@@ -31,6 +31,9 @@ class LoginFragment : Fragment() {
         binding.btnGoToLogin.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToScanBarcodeFragment())
         }
+        binding.btnAddPaymentCard.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToAddPaymentCardFragment())
+        }
     }
 
     override fun onDestroyView() {

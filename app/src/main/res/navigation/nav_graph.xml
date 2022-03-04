@@ -22,10 +22,18 @@
         <action
             android:id="@+id/action_loginFragment_to_scanBarcodeFragment"
             app:destination="@id/scanBarcodeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_addPaymentCardFragment"
+            app:destination="@id/addPaymentCardFragment" />
     </fragment>
     <fragment
         android:id="@+id/scanBarcodeFragment"
         android:name="com.bink.localhero.ScanBarcodeFragment"
         android:label="fragment_scan_barcode"
         tools:layout="@layout/fragment_scan_barcode" />
+    <fragment
+        android:id="@+id/addPaymentCardFragment"
+        android:name="com.bink.localhero.AddCardPayment"
+        android:label="fragment_add_payment_card"
+        tools:layout="@layout/fragment_add_payment_card" />
 </navigation>
