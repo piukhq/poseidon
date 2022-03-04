@@ -8,6 +8,7 @@ import androidx.security.crypto.MasterKey
 object LocalStoreUtils {
 
     private const val PREF_FILE_NAME = "com.bink.localhero"
+    const val KEY_TOKEN = "encrypted_token"
     private lateinit var encryptedSharedPreferences: SharedPreferences
 
     fun createEncryptedPrefs(context: Context) {
