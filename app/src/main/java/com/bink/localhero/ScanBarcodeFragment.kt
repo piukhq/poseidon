@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bink.localhero.utils.LocalStoreUtils
+import com.bink.localhero.utils.LocalStoreUtils.KEY_TOKEN
 import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
@@ -32,8 +34,11 @@ class ScanBarcodeFragment : Fragment() {
             }
         } else {
             Log.d("MainActivity", "Scanned")
-            Toast.makeText(requireContext(), "Scanned: " + result.contents, Toast.LENGTH_LONG)
+            val token = result.contents
+            Toast.makeText(requireContext(), "Scanned: $token", Toast.LENGTH_LONG)
                 .show()
+
+            LocalStoreUtils.setAppSharedPref(KEY_TOKEN,token)
         }
     }
 
