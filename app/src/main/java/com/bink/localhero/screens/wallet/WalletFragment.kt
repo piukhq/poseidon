@@ -1,4 +1,4 @@
-package com.bink.localhero
+package com.bink.localhero.screens.wallet
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bink.localhero.R
 
 class WalletFragment : Fragment() {
 

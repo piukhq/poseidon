@@ -1,4 +1,4 @@
-package com.bink.localhero
+package com.bink.localhero.screens.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnGoToLogin.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToScanBarcodeFragment())
+            findNavController().navigate(com.bink.localhero.LoginFragmentDirections.actionLoginFragmentToScanBarcodeFragment())
         }
     }
 

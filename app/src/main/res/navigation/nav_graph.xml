@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.bink.localhero.LoginFragment"
+        android:name="com.bink.localhero.screens.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/scanBarcodeFragment"
-        android:name="com.bink.localhero.ScanBarcodeFragment"
+        android:name="com.bink.localhero.screens.scanBarcode.ScanBarcodeFragment"
         android:label="fragment_scan_barcode"
         tools:layout="@layout/fragment_scan_barcode" />
 </navigation>

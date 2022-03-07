@@ -1,4 +1,4 @@
-package com.bink.localhero
+package com.bink.localhero.screens.scanBarcode
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bink.localhero.R
 import com.bink.localhero.utils.LocalStoreUtils
 import com.bink.localhero.utils.LocalStoreUtils.KEY_TOKEN
 import com.google.zxing.client.android.Intents
