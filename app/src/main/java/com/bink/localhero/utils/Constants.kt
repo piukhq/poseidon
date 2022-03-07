@@ -1,5 +1,6 @@
 package com.bink.localhero.utils
 
+const val BASE_URL = "https://api.dev.gb.bink.com/v2/"
 const val SEPARATOR_PIPE = "|"
 const val SEPARATOR_HYPHEN = "-"
 const val REGEX_DECIMAL_ONLY = "[^\\d]"

@@ -1,7 +1,7 @@
 package com.bink.localhero.di
 
-import com.bink.localhero.BASE_URL
 import com.bink.localhero.data.remote.ApiService
+import com.bink.localhero.utils.BASE_URL
 import com.bink.localhero.utils.LocalStoreUtils
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
