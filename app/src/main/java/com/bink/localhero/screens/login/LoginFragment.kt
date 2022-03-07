@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnGoToLogin.setOnClickListener {
-            findNavController().navigate(com.bink.localhero.LoginFragmentDirections.actionLoginFragmentToScanBarcodeFragment())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToScanBarcodeFragment())
         }
     }
 

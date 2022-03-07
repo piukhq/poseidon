@@ -25,6 +25,6 @@ class SplashFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        findNavController().navigate(com.bink.localhero.SplashFragmentDirections.actionSplashFragmentToLoginFragment())
+        findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
     }
 }

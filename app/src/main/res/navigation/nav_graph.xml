@@ -27,5 +27,14 @@
         android:id="@+id/scanBarcodeFragment"
         android:name="com.bink.localhero.screens.scanBarcode.ScanBarcodeFragment"
         android:label="fragment_scan_barcode"
-        tools:layout="@layout/fragment_scan_barcode" />
+        tools:layout="@layout/fragment_scan_barcode" >
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.bink.localhero.screens.wallet.WalletFragment"
+        android:label="wallet_fragment"
+        tools:layout="@layout/wallet_fragment" />
 </navigation>

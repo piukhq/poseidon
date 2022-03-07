@@ -40,7 +40,7 @@ fun provideDefaultOkHttpClient(): OkHttpClient {
 
         val newRequest = chain.request().newBuilder()
             .header("Content-Type", "application/json")
-            .header("Authorization", jwtToken)
+            .header("Authorization", " Bearer $jwtToken")
             .url(request)
             .build()
         val response = chain.proceed(newRequest)
