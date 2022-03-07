@@ -1,4 +1,4 @@
-package com.bink.localhero
+package com.bink.localhero.screens.splash
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.journeyapps.barcodescanner.CaptureManager
+import com.bink.localhero.R
 
 class SplashFragment : Fragment() {
 
@@ -25,6 +25,6 @@ class SplashFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
+        findNavController().navigate(com.bink.localhero.SplashFragmentDirections.actionSplashFragmentToLoginFragment())
     }
 }

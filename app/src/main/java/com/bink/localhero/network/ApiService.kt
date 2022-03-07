@@ -1,6 +1,6 @@
 package com.bink.localhero.network
 
-import com.bink.localhero.model.LoyaltyPlan
+import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 import retrofit2.http.GET
 
 interface ApiService {
