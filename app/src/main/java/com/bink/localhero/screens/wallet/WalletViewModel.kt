@@ -20,7 +20,7 @@ class WalletViewModel(private val walletRepository: WalletRepository) : ViewMode
                 val plans = walletRepository.getPlans()
                 _walletUiState.value = WalletUiState.Success(plans)
             } catch (e: Exception) {
-                _walletUiState.value = WalletUiState.Error(e.message)
+                _walletUiState.value = WalletUiState.Error(e)
             }
         }
     }

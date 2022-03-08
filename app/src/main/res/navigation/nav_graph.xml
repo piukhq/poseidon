@@ -36,5 +36,9 @@
         android:id="@+id/walletFragment"
         android:name="com.bink.localhero.screens.wallet.WalletFragment"
         android:label="wallet_fragment"
-        tools:layout="@layout/wallet_fragment" />
+        tools:layout="@layout/wallet_fragment" >
+        <action
+            android:id="@+id/action_walletFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

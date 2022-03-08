@@ -1,18 +1,22 @@
 package com.bink.localhero.screens.wallet
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bink.localhero.R
 import com.bink.localhero.databinding.WalletFragmentBinding
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 import com.bink.localhero.screens.wallet.adapter.WalletAdapter
 import com.bink.localhero.utils.ui_state.WalletUiState
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import retrofit2.HttpException
+import java.lang.Exception
 
 class WalletFragment : Fragment() {
 
@@ -25,7 +29,7 @@ class WalletFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-         _binding = WalletFragmentBinding.inflate(inflater,container, false)
+        _binding = WalletFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -39,7 +43,7 @@ class WalletFragment : Fragment() {
         viewModel.walletUiState.observe(viewLifecycleOwner, {
             when (it) {
                 is WalletUiState.Loading -> showProgress()
-                is WalletUiState.Error -> showError(it.message)
+                is WalletUiState.Error -> showError(it.exception)
                 is WalletUiState.Success -> showPlans(it.plans)
             }
         })
@@ -50,9 +54,11 @@ class WalletFragment : Fragment() {
         Log.d("Wallet", plans.size.toString())
     }
 
-    private fun showError(message: String?) {
-        Log.d("Wallet", message!!)
-
+    private fun showError(exception: Exception?) {
+        val httpException = exception as HttpException
+        if (httpException.code() == 401) {
+            showAlertDialog()
+        }
     }
 
     private fun showProgress() {
@@ -66,6 +72,23 @@ class WalletFragment : Fragment() {
                 adapter = walletAdapter
             }
         }
+    }
+
+    private fun showAlertDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.apply {
+            setTitle("Something went wrong")
+            setMessage("It appears that your token is invalid")
+            setPositiveButton("Try again ?") { _, _ ->
+                viewModel.getPlans()
+            }
+            setNegativeButton("Rescan token") { _, _ ->
+                findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment())
+            }
+            setCancelable(false)
+            create()
+        }
+        builder.show()
     }
 
     override fun onDestroyView() {
