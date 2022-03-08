@@ -16,7 +16,7 @@ val networkModule = module {
         provideDefaultOkHttpClient()
     }
 
-    single() {
+    single {
         provideRetrofit(get())
     }
 
