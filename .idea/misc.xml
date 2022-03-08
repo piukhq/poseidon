@@ -3,15 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19114583333333332" />
-<<<<<<< Updated upstream
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.10326086956521739" />
-=======
-        <entry key="app/src/main/res/layout/fragment_add_payment_card.xml" value="0.33" />
->>>>>>> Stashed changes
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bink/localhero/data/remote/NetworkQualifiers.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

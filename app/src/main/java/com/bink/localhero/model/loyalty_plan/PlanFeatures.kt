@@ -1,4 +1,4 @@
-package com.bink.localhero.model
+package com.bink.localhero.model.loyalty_plan
 
 
 import com.squareup.moshi.Json
