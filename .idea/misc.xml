@@ -7,9 +7,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19114583333333332" />
 <<<<<<< Updated upstream
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.10326086956521739" />
-=======
-        <entry key="app/src/main/res/layout/fragment_add_payment_card.xml" value="0.33" />
->>>>>>> Stashed changes
+        <entry key="app/src/main/res/layout/plan_item.xml" value="0.1609375" />
+        <entry key="app/src/main/res/layout/wallet_fragment.xml" value="0.1609375" />
       </map>
     </option>
   </component>

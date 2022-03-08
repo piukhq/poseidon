@@ -4,4 +4,5 @@
     <dimen name="add_payment_card_field_bottom_margin">16dp</dimen>
     <dimen name="add_payment_card_layout_margin">19dp</dimen>
     <dimen name="add_payment_card_button_bottom_margin">64dp</dimen>
+    <dimen name="plan_item_padding">12dp</dimen>
 </resources>

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
@@ -110,6 +111,7 @@ dependencies {
     //ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     //Kotlin coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
@@ -126,6 +128,8 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:3.14.2")
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
     implementation("com.squareup.moshi:moshi-kotlin:$moshi_version")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+
 
     //Koin
     implementation "io.insert-koin:koin-android:$koin_version"

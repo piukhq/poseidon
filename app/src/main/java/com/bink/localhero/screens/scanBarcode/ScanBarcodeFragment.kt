@@ -43,6 +43,7 @@ class ScanBarcodeFragment : LocalHeroFragment<ScanBarcodeViewModel, FragmentScan
                 .show()
 
             LocalStoreUtils.setAppSharedPref(KEY_TOKEN,token)
+            findNavController().navigate(ScanBarcodeFragmentDirections.actionScanBarcodeFragmentToWalletFragment())
         }
     }
 

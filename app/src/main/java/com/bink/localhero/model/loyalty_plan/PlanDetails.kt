@@ -1,4 +1,4 @@
-package com.bink.localhero.model
+package com.bink.localhero.model.loyalty_plan
 
 
 import com.squareup.moshi.Json
@@ -11,21 +11,21 @@ data class PlanDetails(
     @Json(name = "company_name")
     val companyName: String?,
     @Json(name = "join_incentive")
-    val joinIncentive: Any?,
+    val joinIncentive: String?,
     @Json(name = "plan_description")
-    val planDescription: Any?,
+    val planDescription: String?,
     @Json(name = "plan_label")
-    val planLabel: Any?,
+    val planLabel: String?,
     @Json(name = "plan_name")
     val planName: String?,
     @Json(name = "plan_register_info")
-    val planRegisterInfo: Any?,
+    val planRegisterInfo: String?,
     @Json(name = "plan_summary")
-    val planSummary: Any?,
+    val planSummary: String?,
     @Json(name = "plan_url")
     val planUrl: String?,
     @Json(name = "redeem_instructions")
-    val redeemInstructions: Any?,
+    val redeemInstructions: String?,
     @Json(name = "tiers")
-    val tiers: List<Any>?
+    val tiers: List<Tier>?
 )
