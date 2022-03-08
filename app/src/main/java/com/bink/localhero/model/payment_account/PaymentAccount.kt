@@ -17,19 +17,19 @@ data class PaymentAccount(
     @Json(name = "expiry_year")
     val expiryYear: String,
     @Json(name = "fingerprint")
-    val fingerprint: String,
+    var fingerprint: String,
     @Json(name = "first_six_digits")
-    val firstSixDigits: String,
+    var firstSixDigits: String,
     @Json(name = "issuer")
     val issuer: String,
     @Json(name = "last_four_digits")
-    val lastFourDigits: String,
+    var lastFourDigits: String,
     @Json(name = "name_on_card")
     val nameOnCard: String,
     @Json(name = "provider")
     val provider: String,
     @Json(name = "token")
-    val token: String,
+    var token: String,
     @Json(name = "type")
     val type: String
 )
