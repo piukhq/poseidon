@@ -1,6 +1,6 @@
 package com.bink.localhero.screens.login
 
-import com.bink.localhero.base.LocalHeroViewModel
+import androidx.lifecycle.ViewModel
 
-class LoginViewModel : LocalHeroViewModel() {
+class LoginViewModel : ViewModel() {
 }

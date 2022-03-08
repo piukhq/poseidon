@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
-abstract class LocalHeroFragment<VM : LocalHeroViewModel, VB : ViewBinding> : Fragment() {
+abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
 
     abstract val viewModel: VM
 

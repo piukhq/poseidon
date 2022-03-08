@@ -1,6 +1,6 @@
 package com.bink.localhero.screens.scanBarcode
 
-import com.bink.localhero.base.LocalHeroViewModel
+import androidx.lifecycle.ViewModel
 
-class ScanBarcodeViewModel : LocalHeroViewModel() {
+class ScanBarcodeViewModel : ViewModel() {
 }

@@ -1,6 +1,6 @@
 package com.bink.localhero.screens.splash
 
-import com.bink.localhero.base.LocalHeroViewModel
+import androidx.lifecycle.ViewModel
 
-class SplashViewModel : LocalHeroViewModel() {
+class SplashViewModel : ViewModel() {
 }

@@ -1,15 +1,10 @@
 package com.bink.localhero.screens.scanBarcode
 
-import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.bink.localhero.R
-import com.bink.localhero.base.LocalHeroFragment
+import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.FragmentScanBarcodeBinding
 import com.bink.localhero.utils.LocalStoreUtils
 import com.bink.localhero.utils.LocalStoreUtils.KEY_TOKEN
@@ -18,7 +13,7 @@ import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ScanBarcodeFragment : LocalHeroFragment<ScanBarcodeViewModel, FragmentScanBarcodeBinding>()  {
+class ScanBarcodeFragment : BaseFragment<ScanBarcodeViewModel, FragmentScanBarcodeBinding>()  {
 
     private val scanLauncher = registerForActivityResult(ScanContract()) { result ->
         if (result.contents == null) {
