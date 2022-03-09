@@ -6,4 +6,6 @@ object Keys {
     }
 
     external fun testApiKey(): String
+    external fun binkTestAuthToken():String
+
 }
