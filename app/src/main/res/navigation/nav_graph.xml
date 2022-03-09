@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.bink.localhero.screens.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bink.localhero.screens.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_scanBarcodeFragment"
+            app:destination="@id/scanBarcodeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_addPaymentCardFragment"
+            app:destination="@id/addPaymentCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanBarcodeFragment"
+        android:name="com.bink.localhero.screens.scanBarcode.ScanBarcodeFragment"
+        android:label="fragment_scan_barcode"
+        tools:layout="@layout/fragment_scan_barcode" >
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.bink.localhero.screens.wallet.WalletFragment"
+        android:label="wallet_fragment"
+        tools:layout="@layout/wallet_fragment" >
+        <action
+            android:id="@+id/action_walletFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+        tools:layout="@layout/fragment_scan_barcode" />
+    <fragment
+        android:id="@+id/addPaymentCardFragment"
+        android:name="com.bink.localhero.screens.add_payment_card.AddPaymentCardFragment"
+        android:label="fragment_add_payment_card"
+        tools:layout="@layout/fragment_add_payment_card" />
+</navigation>
