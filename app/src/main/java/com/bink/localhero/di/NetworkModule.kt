@@ -1,29 +1,25 @@
 package com.bink.localhero.di
 
 import com.bink.localhero.data.remote.ApiService
-import com.bink.localhero.utils.BASE_URL
-import com.bink.localhero.utils.LocalStoreUtils
+import com.bink.localhero.data.remote.SpreedlyService
+import com.bink.localhero.utils.*
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import java.util.concurrent.TimeUnit
 
 val networkModule = module {
+    single(named(SPREEDLY_OKHTTP)) { provideSpreedlyOkHttpClient() }
+    single(named(SPREEDLY_RETROFIT)) { provideRetrofit(get(named(SPREEDLY_OKHTTP))) }
+    single(named(SPREEDLY_APISERVICE)) { provideSpreedlyService(get(named(SPREEDLY_RETROFIT))) }
 
-    single {
-        provideDefaultOkHttpClient()
-    }
-
-    single {
-        provideRetrofit(get())
-    }
-
-    single {
-        provideApiService(get())
-    }
-
+    single(named(LOCAL_HERO_OKHTTP)) { provideDefaultOkHttpClient() }
+    single(named(LOCAL_HERO_RETROFIT)) { provideRetrofit(get(named(LOCAL_HERO_OKHTTP))) }
+    single(named(LOCAL_HERO_APISERVICE)) { provideApiService(get(named(LOCAL_HERO_RETROFIT))) }
 }
 
 fun provideDefaultOkHttpClient(): OkHttpClient {
@@ -52,6 +48,26 @@ fun provideDefaultOkHttpClient(): OkHttpClient {
         .addInterceptor(interceptor).build()
 }
 
+fun provideSpreedlyOkHttpClient(): OkHttpClient {
+    val interceptor = HttpLoggingInterceptor()
+    interceptor.level = HttpLoggingInterceptor.Level.BODY
+
+    val headerAuthorizationInterceptor = Interceptor { chain ->
+        val request = chain.request().url().newBuilder().build()
+
+        val newRequest = chain.request().newBuilder()
+            .header("Content-Type", "application/json")
+            .url(request)
+            .build()
+        val response = chain.proceed(newRequest)
+        response
+    }
+
+    return OkHttpClient.Builder()
+        .addInterceptor(headerAuthorizationInterceptor)
+        .addInterceptor(interceptor).build()
+}
+
 fun provideRetrofit(client: OkHttpClient): Retrofit {
     val retrofitBuilder = Retrofit.Builder()
         .baseUrl(BASE_URL)
@@ -62,3 +78,5 @@ fun provideRetrofit(client: OkHttpClient): Retrofit {
 }
 
 fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+fun provideSpreedlyService(retrofit: Retrofit): SpreedlyService =
+    retrofit.create(SpreedlyService::class.java)

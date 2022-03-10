@@ -11,21 +11,21 @@ data class PlanDetails(
     @Json(name = "company_name")
     val companyName: String?,
     @Json(name = "join_incentive")
-    val joinIncentive: String?,
+    val joinIncentive: Any?,
     @Json(name = "plan_description")
-    val planDescription: String?,
+    val planDescription: Any?,
     @Json(name = "plan_label")
-    val planLabel: String?,
+    val planLabel: Any?,
     @Json(name = "plan_name")
     val planName: String?,
     @Json(name = "plan_register_info")
-    val planRegisterInfo: String?,
+    val planRegisterInfo: Any?,
     @Json(name = "plan_summary")
-    val planSummary: String?,
+    val planSummary: Any?,
     @Json(name = "plan_url")
     val planUrl: String?,
     @Json(name = "redeem_instructions")
-    val redeemInstructions: String?,
+    val redeemInstructions: Any?,
     @Json(name = "tiers")
-    val tiers: List<Tier>?
+    val tiers: List<Any>?
 )

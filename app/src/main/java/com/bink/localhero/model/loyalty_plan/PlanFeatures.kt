@@ -15,9 +15,9 @@ data class PlanFeatures(
     @Json(name = "has_transactions")
     val hasTransactions: Boolean?,
     @Json(name = "journeys")
-    val journeys: List<Journey>?,
+    val journeys: List<Any>?,
     @Json(name = "plan_type")
     val planType: Int?,
     @Json(name = "text_colour")
-    val textColour: String?
+    val textColour: Any?
 )

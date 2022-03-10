@@ -1,4 +1,4 @@
-package com.bink.localhero.model
+package com.bink.localhero.model.loyalty_plan
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
