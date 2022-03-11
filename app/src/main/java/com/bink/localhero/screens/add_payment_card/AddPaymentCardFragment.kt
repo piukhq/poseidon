@@ -22,15 +22,20 @@ class AddPaymentCardFragment :
                 cardNumber.presentedCardType().apply {
                     binding.tvPaymentCardType.text = this.name
                 }
+            }
+            checkAddBtnEnable()
+        }
 
-                if (cardNumber.cardValidation() == PaymentCardType.NONE) {
+        binding.etCardNumber.setOnFocusChangeListener { _, focus ->
+            if (!focus) {
+                if (binding.etCardNumber.text.toString().cardValidation() == PaymentCardType.NONE) {
                     binding.tilCardNumber.error = "Invalid card number"
                 } else {
                     binding.tilCardNumber.error = null
                 }
+            } else {
+                binding.tilCardNumber.error = null
             }
-
-            checkAddBtnEnable()
         }
 
         binding.etExpiry.addTextChangedListener {
@@ -54,7 +59,7 @@ class AddPaymentCardFragment :
 
     private fun checkAddBtnEnable() {
         binding.btnAddPaymentCard.isEnabled =
-            ((binding.tilCardNumber.error == null && !binding.etCardNumber.text.isNullOrEmpty())
+            ((binding.tilCardNumber.error == null && binding.etCardNumber.text.toString().cardValidation() != PaymentCardType.NONE)
                     && (binding.tilExpiry.error == null && !binding.etExpiry.text.isNullOrEmpty()))
     }
 
