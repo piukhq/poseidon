@@ -57,7 +57,9 @@ class WalletFragment : Fragment() {
     private fun showError(exception: Exception?) {
         val httpException = exception as HttpException
         if (httpException.code() == 401) {
-            showAlertDialog()
+            showAlertDialog("It appears that your token is invalid")
+        } else {
+            showAlertDialog("Unexpected error happened")
         }
     }
 
@@ -74,16 +76,14 @@ class WalletFragment : Fragment() {
         }
     }
 
-    private fun showAlertDialog() {
+    private fun showAlertDialog(message:String) {
         val builder = AlertDialog.Builder(requireContext())
         builder.apply {
             setTitle("Something went wrong")
-            setMessage("It appears that your token is invalid")
+            setMessage(message)
             setPositiveButton("Try again ?") { _, _ ->
-                viewModel.getPlans()
-            }
-            setNegativeButton("Rescan token") { _, _ ->
                 findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment())
+
             }
             setCancelable(false)
             create()
