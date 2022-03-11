@@ -17,24 +17,63 @@ class AddPaymentCardFragment :
     override val viewModel: AddPaymentCardViewModel by viewModel()
 
     override fun setup() {
+        binding.etCardNumber.setOnFocusChangeListener { _, focus ->
+            if (!focus) {
+                if (binding.etCardNumber.text.toString().cardValidation() == PaymentCardType.NONE) {
+                    binding.tilCardNumber.error = "Invalid card number"
+                } else {
+                    binding.tilCardNumber.error = null
+                }
+            } else {
+                binding.tilCardNumber.error = null
+            }
+        }
+
         binding.etCardNumber.addTextChangedListener {
             it?.trim().toString().let { cardNumber ->
                 cardNumber.presentedCardType().apply {
                     binding.tvPaymentCardType.text = this.name
                 }
-
-                if (cardNumber.cardValidation() == PaymentCardType.NONE) {
-                    binding.tilCardNumber.error = "Invalid card number"
-                } else {
-                    binding.tilCardNumber.error = null
-                }
             }
-
             checkAddBtnEnable()
         }
 
+        binding.etNameOnCard.setOnFocusChangeListener { _, focus ->
+            if(!focus){
+                if(binding.etNameOnCard.text.toString().isNullOrEmpty()){
+                    binding.tilNameOnCard.error = "Invalid name"
+                } else {
+                    binding.tilNameOnCard.error = null
+                }
+            } else {
+                binding.tilNameOnCard.error = null
+            }
+        }
+
+        binding.etNameOnCard.addTextChangedListener {
+            checkAddBtnEnable()
+        }
+
+        binding.etExpiry.setOnFocusChangeListener { _, focus ->
+            if (!focus) {
+                binding.etExpiry.text.toString().let {
+                    if (!it.dateValidation()) {
+                        binding.tilExpiry.error = "Invalid expiry date"
+                    } else {
+                        binding.tilExpiry.error = null
+                    }
+
+                    if (!it.formatDate().contentEquals(it)){
+                        binding.etExpiry.setText(it.formatDate())
+                    }
+                }
+
+            } else {
+                binding.tilExpiry.error = null
+            }
+        }
+
         binding.etExpiry.addTextChangedListener {
-            binding.tilExpiry.error = cardExpiryErrorCheck(it?.trim().toString())
             checkAddBtnEnable()
         }
 
@@ -43,19 +82,11 @@ class AddPaymentCardFragment :
         }
     }
 
-    private fun cardExpiryErrorCheck(text: String): String? {
-        with(text) {
-            if (!dateValidation()) {
-                return "Invalid expiry date"
-            }
-        }
-        return null
-    }
-
     private fun checkAddBtnEnable() {
         binding.btnAddPaymentCard.isEnabled =
-            ((binding.tilCardNumber.error == null && !binding.etCardNumber.text.isNullOrEmpty())
-                    && (binding.tilExpiry.error == null && !binding.etExpiry.text.isNullOrEmpty()))
+            ((binding.tilCardNumber.error == null && binding.etCardNumber.text.toString().cardValidation() != PaymentCardType.NONE)
+                    && (binding.tilNameOnCard.error == null && binding.etNameOnCard.text.toString().isNotEmpty())
+                    && (binding.tilExpiry.error == null && binding.etExpiry.text.toString().dateValidation()))
     }
 
 
