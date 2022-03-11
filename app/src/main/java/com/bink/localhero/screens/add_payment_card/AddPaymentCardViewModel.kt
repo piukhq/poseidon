@@ -1,7 +1,7 @@
 package com.bink.localhero.screens.add_payment_card
 
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bink.localhero.base.LocalHeroViewModel
 import com.bink.localhero.data.remote.PaymentCardRepository
 import com.bink.localhero.model.payment_account.PaymentAccount
 import com.bink.localhero.model.payment_account.SpreedlyCreditCard
@@ -11,7 +11,7 @@ import com.bink.localhero.utils.Keys
 import kotlinx.coroutines.launch
 
 class AddPaymentCardViewModel(private val addPaymentCardRepository: PaymentCardRepository) :
-    LocalHeroViewModel() {
+    ViewModel() {
 
     fun sendPaymentCardToSpreedly(cardNumber: String, paymentAccount: PaymentAccount) {
         val spreedlyCreditCard = SpreedlyCreditCard(

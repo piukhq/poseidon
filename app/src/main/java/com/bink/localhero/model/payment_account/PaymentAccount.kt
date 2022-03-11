@@ -1,6 +1,8 @@
 package com.bink.localhero.model.payment_account
 
 
+import com.bink.localhero.utils.StringUtils
+import com.bink.localhero.utils.md5
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -17,19 +19,33 @@ data class PaymentAccount(
     @Json(name = "expiry_year")
     val expiryYear: String,
     @Json(name = "fingerprint")
-    val fingerprint: String,
+    var fingerprint: String,
     @Json(name = "first_six_digits")
-    val firstSixDigits: String,
+    var firstSixDigits: String,
     @Json(name = "issuer")
     val issuer: String,
     @Json(name = "last_four_digits")
-    val lastFourDigits: String,
+    var lastFourDigits: String,
     @Json(name = "name_on_card")
     val nameOnCard: String,
     @Json(name = "provider")
     val provider: String,
     @Json(name = "token")
-    val token: String,
+    var token: String,
     @Json(name = "type")
     val type: String
-)
+) {
+    companion object {
+        const val TOKEN_LENGTH = 100
+
+        fun tokenGenerator(): String {
+            return StringUtils.randomString(TOKEN_LENGTH)
+        }
+
+        fun fingerprintGenerator(pan: String, expiryYear: String, expiryMonth: String): String {
+            // Based a hash of the pan, it's the key identifier of the card
+            return "$pan|$expiryMonth|$expiryYear".md5()
+        }
+    }
+
+}

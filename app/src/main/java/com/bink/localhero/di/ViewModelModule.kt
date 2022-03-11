@@ -24,6 +24,7 @@ val viewModelModule = module {
 }
 
 fun provideWalletRepository(apiService: ApiService): WalletRepository = WalletRepository(apiService)
+
 fun providePaymentCardRepository(
     apiService: ApiService,
     spreedlyService: SpreedlyService
