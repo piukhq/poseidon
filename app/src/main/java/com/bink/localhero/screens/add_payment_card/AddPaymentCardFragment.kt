@@ -56,11 +56,18 @@ class AddPaymentCardFragment :
 
         binding.etExpiry.setOnFocusChangeListener { _, focus ->
             if (!focus) {
-                if (!binding.etExpiry.text.toString().dateValidation()) {
-                    binding.tilExpiry.error = "Invalid expiry date"
-                } else {
-                    binding.tilExpiry.error = null
+                binding.etExpiry.text.toString().let {
+                    if (!it.dateValidation()) {
+                        binding.tilExpiry.error = "Invalid expiry date"
+                    } else {
+                        binding.tilExpiry.error = null
+                    }
+
+                    if (!it.formatDate().contentEquals(it)){
+                        binding.etExpiry.setText(it.formatDate())
+                    }
                 }
+
             } else {
                 binding.tilExpiry.error = null
             }
