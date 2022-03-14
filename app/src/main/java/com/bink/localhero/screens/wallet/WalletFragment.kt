@@ -46,6 +46,10 @@ class WalletFragment : Fragment() {
                 is WalletUiState.Success -> showPlans(it.plans)
             }
         })
+
+        binding.imgMore.setOnClickListener {
+            findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToModalBottomSheet())
+        }
     }
 
     private fun showPlans(plans: List<LoyaltyPlan>) {

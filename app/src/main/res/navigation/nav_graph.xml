@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_walletFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_walletFragment_to_modalBottomSheet"
+            app:destination="@id/modalBottomSheet" />
     </fragment>
         tools:layout="@layout/fragment_scan_barcode" />
     <fragment
@@ -50,4 +53,8 @@
         android:name="com.bink.localhero.screens.add_payment_card.AddPaymentCardFragment"
         android:label="fragment_add_payment_card"
         tools:layout="@layout/fragment_add_payment_card" />
+    <dialog
+        android:id="@+id/modalBottomSheet"
+        android:name="com.bink.localhero.screens.dialog.ModalBottomSheet"
+        android:label="ModalBottomSheet" />
 </navigation>
