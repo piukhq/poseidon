@@ -11,7 +11,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 val spreedlyModule = module {
     single { provideSpreedlyOkHttpClient() }
-    single { provideSpreedlyRetrofit(get()) }
     single { provideSpreedlyService(get()) }
 }
 
@@ -33,15 +32,6 @@ fun provideSpreedlyOkHttpClient(): OkHttpClient {
     return OkHttpClient.Builder()
         .addInterceptor(headerAuthorizationInterceptor)
         .addInterceptor(interceptor).build()
-}
-
-fun provideSpreedlyRetrofit(client: OkHttpClient): Retrofit {
-    val retrofitBuilder = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create())
-        .client(client)
-
-    return retrofitBuilder.build()
 }
 
 fun provideSpreedlyService(retrofit: Retrofit): SpreedlyService =
