@@ -5,13 +5,15 @@ import com.bink.localhero.utils.BASE_URL
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 val spreedlyModule = module {
-    single { provideSpreedlyOkHttpClient() }
-    single { provideSpreedlyService(get()) }
+    single(named("spreedlyOkHttp")) { provideSpreedlyOkHttpClient() }
+    single(named("spreedlyRetrofit")) { provideRetrofit(get(named("spreedlyOkHttp"))) }
+    single { provideSpreedlyService(get(named("spreedlyRetrofit"))) }
 }
 
 fun provideSpreedlyOkHttpClient(): OkHttpClient {

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bink.localhero.utils.ui_state.WalletUiState
+import com.bink.localhero.utils.WalletUiState
 import kotlinx.coroutines.launch
 
 class WalletViewModel(private val walletRepository: WalletRepository) : ViewModel() {

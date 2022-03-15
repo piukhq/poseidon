@@ -1,6 +1,5 @@
 package com.bink.localhero.screens.wallet
 
-import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bink.localhero.databinding.WalletFragmentBinding
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 import com.bink.localhero.screens.wallet.adapter.WalletAdapter
-import com.bink.localhero.utils.ui_state.WalletUiState
+import com.bink.localhero.utils.WalletUiState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import retrofit2.HttpException
 import java.lang.Exception
@@ -40,13 +39,13 @@ class WalletFragment : Fragment() {
         setupRecyclerView()
         viewModel.getPlans()
 
-        viewModel.walletUiState.observe(viewLifecycleOwner, {
+        viewModel.walletUiState.observe(viewLifecycleOwner) {
             when (it) {
                 is WalletUiState.Loading -> showProgress()
                 is WalletUiState.Error -> showError(it.exception)
                 is WalletUiState.Success -> showPlans(it.plans)
             }
-        })
+        }
     }
 
     private fun showPlans(plans: List<LoyaltyPlan>) {

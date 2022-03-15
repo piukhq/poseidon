@@ -1,8 +1,8 @@
 package com.bink.localhero.di
 
 import com.bink.localhero.data.remote.ApiService
-import com.bink.localhero.data.remote.SpreedlyService
-import com.bink.localhero.utils.*
+import com.bink.localhero.utils.BASE_URL
+import com.bink.localhero.utils.LocalStoreUtils
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -10,12 +10,11 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import java.util.concurrent.TimeUnit
 
 val networkModule = module {
-    single { provideDefaultOkHttpClient() }
-    single { provideRetrofit(get()) }
-    single { provideApiService(get()) }
+    single(named("localHeroOkHttp")) { provideDefaultOkHttpClient() }
+    single(named("localHeroRetrofit")) { provideRetrofit(get(named("localHeroOkHttp"))) }
+    single { provideApiService(get(named("localHeroRetrofit"))) }
 }
 
 fun provideDefaultOkHttpClient(): OkHttpClient {

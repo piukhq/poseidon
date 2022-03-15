@@ -88,6 +88,28 @@ class AddPaymentCardFragment :
         }
     }
 
+    override fun observeViewModel() {
+        viewModel.addPaymentCardUiState.observe(viewLifecycleOwner) {
+            when (it) {
+                is AddPaymentCardUiState.Loading -> showProgress()
+                is AddPaymentCardUiState.Error -> showError(it.exception)
+                is AddPaymentCardUiState.Success -> goToWallet()
+            }
+        }
+    }
+
+    private fun showProgress() {
+        TODO("Not yet implemented")
+    }
+
+    private fun showError(exception: Exception?) {
+        TODO("Not yet implemented")
+    }
+
+    private fun goToWallet(){
+        TODO("Not yet implemented")
+    }
+
     private fun checkAddBtnEnable() {
         binding.btnAddPaymentCard.isEnabled =
             ((binding.tilCardNumber.error == null && binding.etCardNumber.text.toString().cardValidation() != PaymentCardType.NONE)
