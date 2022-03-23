@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
+import com.bink.localhero.R
 
 abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
 
@@ -38,5 +40,31 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
         super.onDestroy()
         _binding = null
     }
+
+    fun showDialog(
+        title: String,
+        message: String?,
+        positiveBtn: String,
+        negativeBtn: String,
+        positiveCallback: () -> Unit,
+        negativeCallback: () -> Unit
+    ) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.apply {
+            setTitle(title)
+            setMessage(message)
+            setPositiveButton(positiveBtn) { _, _ ->
+                positiveCallback()
+            }
+            setNegativeButton(negativeBtn) { _, _ ->
+                negativeCallback()
+            }
+            setCancelable(false)
+            create()
+        }
+        builder.show()
+    }
+
+    fun toggleProgressDialog(){}
 
 }

@@ -1,47 +1,37 @@
 package com.bink.localhero.screens.wallet
 
-import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bink.localhero.R
+import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.WalletFragmentBinding
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 import com.bink.localhero.screens.wallet.adapter.WalletAdapter
 import com.bink.localhero.utils.WalletUiState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import retrofit2.HttpException
-import java.lang.Exception
 
-class WalletFragment : Fragment() {
+class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
 
-    private val viewModel: WalletViewModel by viewModel()
-    private var _binding: WalletFragmentBinding? = null
-    private val binding get() = _binding!!
     private lateinit var walletAdapter: WalletAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = WalletFragmentBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    override val bindingInflater: (LayoutInflater) -> WalletFragmentBinding
+        get() = WalletFragmentBinding::inflate
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override val viewModel: WalletViewModel by viewModel()
 
+    override fun setup() {
         walletAdapter = WalletAdapter(mutableListOf())
         setupRecyclerView()
         viewModel.getPlans()
+    }
 
+    override fun observeViewModel() {
         viewModel.walletUiState.observe(viewLifecycleOwner) {
             when (it) {
-                is WalletUiState.Loading -> showProgress()
+                is WalletUiState.Loading -> toggleProgressDialog()
                 is WalletUiState.Error -> showError(it.exception)
                 is WalletUiState.Success -> showPlans(it.plans)
             }
@@ -53,14 +43,18 @@ class WalletFragment : Fragment() {
         Log.d("Wallet", plans.size.toString())
     }
 
+
     private fun showError(exception: Exception?) {
         val httpException = exception as HttpException
-        if (httpException.code() == 401) {
-            showAlertDialog()
-        }
-    }
 
-    private fun showProgress() {
+        if (httpException.code() == 401) {
+            showDialog(getString(R.string.error_title),
+                getString(R.string.login_invalid_token),
+                getString(R.string.try_again),
+                getString(R.string.cancel),
+                { viewModel.getPlans() },
+                { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
+        }
 
     }
 
@@ -71,27 +65,5 @@ class WalletFragment : Fragment() {
                 adapter = walletAdapter
             }
         }
-    }
-
-    private fun showAlertDialog() {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.apply {
-            setTitle("Something went wrong")
-            setMessage("It appears that your token is invalid")
-            setPositiveButton("Try again ?") { _, _ ->
-                viewModel.getPlans()
-            }
-            setNegativeButton("Rescan token") { _, _ ->
-                findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment())
-            }
-            setCancelable(false)
-            create()
-        }
-        builder.show()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
