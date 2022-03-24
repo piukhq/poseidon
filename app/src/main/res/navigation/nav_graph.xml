@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_loginFragment_to_addPaymentCardFragment"
             app:destination="@id/addPaymentCardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_wallet"
+            app:destination="@id/walletFragment" />
     </fragment>
     <fragment
         android:id="@+id/scanBarcodeFragment"

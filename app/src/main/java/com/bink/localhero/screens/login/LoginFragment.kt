@@ -19,6 +19,9 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
         binding.btnAddPaymentCard.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToAddPaymentCardFragment())
         }
+        binding.btnGoToWallet.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWallet())
+        }
     }
 
 }

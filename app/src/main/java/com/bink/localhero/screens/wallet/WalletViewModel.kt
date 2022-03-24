@@ -18,7 +18,19 @@ class WalletViewModel(private val walletRepository: WalletRepository) : ViewMode
         viewModelScope.launch {
             try {
                 val plans = walletRepository.getPlans()
-                _walletUiState.value = WalletUiState.Success(plans)
+                _walletUiState.value = WalletUiState.ShowPlans(plans)
+            } catch (e: Exception) {
+                _walletUiState.value = WalletUiState.Error(e)
+            }
+        }
+    }
+
+    fun getWallet(){
+        _walletUiState.value = WalletUiState.Loading
+        viewModelScope.launch {
+            try{
+                val wallet = walletRepository.getWallet()
+                _walletUiState.value = WalletUiState.ShowWallet(wallet)
             } catch (e: Exception) {
                 _walletUiState.value = WalletUiState.Error(e)
             }
