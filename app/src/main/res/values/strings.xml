@@ -13,4 +13,5 @@
     <string name="cancel">Cancel</string>
     <string name="login_invalid_token">It appears that your token is invalid</string>
     <string name="wallet_title">Wallet</string>
+    <string name="unexpected_error">An unexpected error has happened</string>
 </resources>

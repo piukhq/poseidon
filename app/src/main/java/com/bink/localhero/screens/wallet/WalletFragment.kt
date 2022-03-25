@@ -80,7 +80,7 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
         } else {
             requireContext().showDialog(
                 title = getString(R.string.error_title),
-                message = "An unexpected error has happened",
+                message = getString(R.string.unexpected_error),
                 positiveBtn = getString(R.string.try_again),
                 negativeBtn = getString(R.string.cancel),
                 positiveCallback = { viewModel.getPlans() },
