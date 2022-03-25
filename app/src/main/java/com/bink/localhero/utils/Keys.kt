@@ -7,4 +7,5 @@ object Keys {
 
     external fun testApiKey(): String
     external fun spreedlyKey(): String
+    external fun binkTestAuthToken(): String
 }

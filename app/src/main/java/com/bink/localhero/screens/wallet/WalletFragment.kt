@@ -77,6 +77,14 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
                 negativeBtn = getString(R.string.cancel),
                 positiveCallback = { viewModel.getPlans() },
                 negativeCallback = { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
+        } else {
+            requireContext().showDialog(
+                title = getString(R.string.error_title),
+                message = "An unexpected error has happened",
+                positiveBtn = getString(R.string.try_again),
+                negativeBtn = getString(R.string.cancel),
+                positiveCallback = { viewModel.getPlans() },
+                negativeCallback = { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
         }
 
     }
@@ -93,7 +101,6 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
                 adapter = walletAdapter
             }
         }
-
 
     }
 }
