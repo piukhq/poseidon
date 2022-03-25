@@ -2,6 +2,8 @@ package com.bink.localhero.di
 
 import com.bink.localhero.data.remote.ApiService
 import com.bink.localhero.utils.BASE_URL
+import com.bink.localhero.utils.LOCAL_HERO_OKHTTP
+import com.bink.localhero.utils.LOCAL_HERO_RETROFIT
 import com.bink.localhero.utils.LocalStoreUtils
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -12,9 +14,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 val networkModule = module {
-    single(named("localHeroOkHttp")) { provideDefaultOkHttpClient() }
-    single(named("localHeroRetrofit")) { provideRetrofit(get(named("localHeroOkHttp"))) }
-    single { provideApiService(get(named("localHeroRetrofit"))) }
+    single(named(LOCAL_HERO_OKHTTP)) { provideDefaultOkHttpClient() }
+    single(named(LOCAL_HERO_RETROFIT)) { provideRetrofit(get(named(LOCAL_HERO_OKHTTP))) }
+    single { provideApiService(get(named(LOCAL_HERO_RETROFIT))) }
 }
 
 fun provideDefaultOkHttpClient(): OkHttpClient {

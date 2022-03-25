@@ -14,6 +14,7 @@ import com.bink.localhero.model.wallet.UserWallet
 import com.bink.localhero.screens.wallet.adapter.PlansAdapter
 import com.bink.localhero.screens.wallet.adapter.UserWalletAdapter
 import com.bink.localhero.utils.WalletUiState
+import com.bink.localhero.utils.showDialog
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import retrofit2.HttpException
 
@@ -69,12 +70,13 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
         val httpException = exception as HttpException
 
         if (httpException.code() == 401) {
-            showDialog(getString(R.string.error_title),
-                getString(R.string.login_invalid_token),
-                getString(R.string.try_again),
-                getString(R.string.cancel),
-                { viewModel.getPlans() },
-                { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
+            requireContext().showDialog(
+                title = getString(R.string.error_title),
+                message = getString(R.string.login_invalid_token),
+                positiveBtn = getString(R.string.try_again),
+                negativeBtn = getString(R.string.cancel),
+                positiveCallback = { viewModel.getPlans() },
+                negativeCallback = { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
         }
 
     }

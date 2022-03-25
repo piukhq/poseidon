@@ -41,30 +41,6 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
         _binding = null
     }
 
-    fun showDialog(
-        title: String,
-        message: String?,
-        positiveBtn: String,
-        negativeBtn: String,
-        positiveCallback: () -> Unit,
-        negativeCallback: () -> Unit
-    ) {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.apply {
-            setTitle(title)
-            setMessage(message)
-            setPositiveButton(positiveBtn) { _, _ ->
-                positiveCallback()
-            }
-            setNegativeButton(negativeBtn) { _, _ ->
-                negativeCallback()
-            }
-            setCancelable(false)
-            create()
-        }
-        builder.show()
-    }
-
     fun toggleProgressDialog(){}
 
 }

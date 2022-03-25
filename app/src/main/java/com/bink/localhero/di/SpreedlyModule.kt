@@ -2,6 +2,8 @@ package com.bink.localhero.di
 
 import com.bink.localhero.data.remote.SpreedlyService
 import com.bink.localhero.utils.BASE_URL
+import com.bink.localhero.utils.SPREEDLY_OKHTTP
+import com.bink.localhero.utils.SPREEDLY_RETROFIT
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -11,9 +13,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 val spreedlyModule = module {
-    single(named("spreedlyOkHttp")) { provideSpreedlyOkHttpClient() }
-    single(named("spreedlyRetrofit")) { provideRetrofit(get(named("spreedlyOkHttp"))) }
-    single { provideSpreedlyService(get(named("spreedlyRetrofit"))) }
+    single(named(SPREEDLY_OKHTTP)) { provideSpreedlyOkHttpClient() }
+    single(named(SPREEDLY_RETROFIT)) { provideRetrofit(get(named(SPREEDLY_OKHTTP))) }
+    single { provideSpreedlyService(get(named(SPREEDLY_RETROFIT))) }
 }
 
 fun provideSpreedlyOkHttpClient(): OkHttpClient {

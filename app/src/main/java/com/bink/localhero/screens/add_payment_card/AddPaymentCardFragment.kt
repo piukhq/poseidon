@@ -101,12 +101,12 @@ class AddPaymentCardFragment :
     }
 
     private fun showError(exception: Exception?) {
-        showDialog(getString(R.string.error_title),
-            exception?.localizedMessage,
-            getString(R.string.try_again),
-            getString(R.string.cancel),
-            { postCard() },
-            {})
+        requireContext().showDialog(title = getString(R.string.error_title),
+            message = exception?.localizedMessage,
+            positiveBtn = getString(R.string.try_again),
+            negativeBtn = getString(R.string.cancel),
+            positiveCallback = { postCard() },
+            negativeCallback = {})
     }
 
     private fun goToWallet() {
