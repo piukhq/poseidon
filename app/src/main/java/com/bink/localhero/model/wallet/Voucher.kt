@@ -13,15 +13,15 @@ data class Voucher(
     @Json(name = "earn_type")
     val earnType: String,
     @Json(name = "expiry_date")
-    val expiryDate: Any,
+    val expiryDate: Long,
     @Json(name = "headline")
     val headline: String,
     @Json(name = "issued_date")
-    val issuedDate: Any,
+    val issuedDate: Long,
     @Json(name = "progress_display_text")
     val progressDisplayText: String,
     @Json(name = "redeemed_date")
-    val redeemedDate: Any,
+    val redeemedDate: Long,
     @Json(name = "reward_text")
     val rewardText: String,
     @Json(name = "state")
@@ -29,5 +29,5 @@ data class Voucher(
     @Json(name = "terms_and_conditions")
     val termsAndConditions: String,
     @Json(name = "voucher_code")
-    val voucherCode: Any
+    val voucherCode: String
 )
