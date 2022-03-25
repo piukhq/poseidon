@@ -3,10 +3,7 @@ package com.bink.localhero.di
 import RELEASE_BUILD_TYPE
 import com.bink.localhero.BuildConfig
 import com.bink.localhero.data.remote.ApiService
-import com.bink.localhero.utils.BASE_URL
-import com.bink.localhero.utils.LOCAL_HERO_OKHTTP
-import com.bink.localhero.utils.LOCAL_HERO_RETROFIT
-import com.bink.localhero.utils.LocalStoreUtils
+import com.bink.localhero.utils.*
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
