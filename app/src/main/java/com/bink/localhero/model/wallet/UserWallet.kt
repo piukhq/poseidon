@@ -1,6 +1,8 @@
 package com.bink.localhero.model.wallet
 
 
+import com.bink.localhero.utils.LOYALTY_HEADER
+import com.bink.localhero.utils.PAYMENT_HEADER
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -17,7 +19,9 @@ data class UserWallet(
 fun UserWallet.asList() : List<Any>{
     return ArrayList<Any>().apply {
         addAll(joins)
+        add(LOYALTY_HEADER)
         addAll(loyaltyCards)
+        add(PAYMENT_HEADER)
         addAll(paymentAccounts)
     }
 }

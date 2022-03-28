@@ -7,27 +7,27 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Voucher(
     @Json(name = "barcode_type")
-    val barcodeType: Int,
+    val barcodeType: Int?,
     @Json(name = "body_text")
-    val bodyText: String,
+    val bodyText: String?,
     @Json(name = "earn_type")
-    val earnType: String,
+    val earnType: String?,
     @Json(name = "expiry_date")
-    val expiryDate: Long,
+    val expiryDate: Long?,
     @Json(name = "headline")
-    val headline: String,
+    val headline: String?,
     @Json(name = "issued_date")
-    val issuedDate: Long,
+    val issuedDate: Long?,
     @Json(name = "progress_display_text")
-    val progressDisplayText: String,
+    val progressDisplayText: String?,
     @Json(name = "redeemed_date")
-    val redeemedDate: Long,
+    val redeemedDate: Long?,
     @Json(name = "reward_text")
-    val rewardText: String,
+    val rewardText: String?,
     @Json(name = "state")
-    val state: String,
+    val state: String?,
     @Json(name = "terms_and_conditions")
-    val termsAndConditions: String,
+    val termsAndConditions: String?,
     @Json(name = "voucher_code")
-    val voucherCode: String
+    val voucherCode: String?
 )

@@ -7,19 +7,19 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class LoyaltyCard(
     @Json(name = "balance")
-    val balance: Balance,
+    val balance: Balance?,
     @Json(name = "card")
-    val card: Card,
+    val card: Card?,
     @Json(name = "id")
-    val id: Int,
+    val id: Int?,
     @Json(name = "loyalty_plan_id")
-    val loyaltyPlanId: Int,
+    val loyaltyPlanId: Int?,
     @Json(name = "pll_links")
-    val loyaltyCardPllLinks: List<LoyaltyCardPllLink>,
+    val loyaltyCardPllLinks: List<LoyaltyCardPllLink>?,
     @Json(name = "status")
-    val status: Status,
+    val status: Status?,
     @Json(name = "transactions")
-    val transactions: List<Transaction>,
+    val transactions: List<Transaction>?,
     @Json(name = "vouchers")
-    val vouchers: List<Voucher>
+    val vouchers: List<Voucher>?
 )
