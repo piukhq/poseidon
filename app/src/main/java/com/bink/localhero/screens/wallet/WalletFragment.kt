@@ -39,13 +39,13 @@ class WalletFragment : Fragment() {
         setupRecyclerView()
         viewModel.getPlans()
 
-        viewModel.walletUiState.observe(viewLifecycleOwner, {
+        viewModel.walletUiState.observe(viewLifecycleOwner) {
             when (it) {
                 is WalletUiState.Loading -> showProgress()
                 is WalletUiState.Error -> showError(it.exception)
                 is WalletUiState.Success -> showPlans(it.plans)
             }
-        })
+        }
 
         binding.imgMore.setOnClickListener {
             findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToModalBottomSheet())
