@@ -20,7 +20,7 @@ class LoyaltyCardViewHolder(
                 onClickListener(item)
             }
 
-            vwSplitter.visibility = if(isLastItem) View.INVISIBLE else View.VISIBLE
+            vwSplitter.visibility = if (isLastItem) View.INVISIBLE else View.VISIBLE
         }
 
     }

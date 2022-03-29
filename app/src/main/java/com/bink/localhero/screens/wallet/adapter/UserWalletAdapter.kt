@@ -12,7 +12,6 @@ import com.bink.localhero.screens.wallet.adapter.viewholders.LoyaltyCardViewHold
 import com.bink.localhero.screens.wallet.adapter.viewholders.PaymentCardViewHolder
 import com.bink.localhero.utils.BaseViewHolder
 import com.bink.localhero.utils.PAYMENT_HEADER
-import java.lang.IndexOutOfBoundsException
 
 class UserWalletAdapter(
     val onClickListener: (Any) -> Unit = {}
@@ -80,8 +79,14 @@ class UserWalletAdapter(
             wallet[position].let {
                 when (holder) {
                     is HeaderViewHolder -> holder.bind(it as String)
-                    is PaymentCardViewHolder -> holder.bind((it as PaymentCard), isLastItem(position))
-                    is LoyaltyCardViewHolder ->holder.bind((it as LoyaltyCard), isLastItem(position))
+                    is PaymentCardViewHolder -> holder.bind(
+                        (it as PaymentCard),
+                        isLastItem(position)
+                    )
+                    is LoyaltyCardViewHolder -> holder.bind(
+                        (it as LoyaltyCard),
+                        isLastItem(position)
+                    )
                 }
             }
         }
@@ -93,7 +98,7 @@ class UserWalletAdapter(
     }
 
     private fun isLastItem(pos: Int): Boolean {
-        try{
+        try {
             userWallet?.asList()?.get(pos)?.let {
                 return when (it) {
                     is LoyaltyCard -> {
@@ -104,7 +109,7 @@ class UserWalletAdapter(
                     }
                 }
             }
-        } catch (e: IndexOutOfBoundsException){
+        } catch (e: IndexOutOfBoundsException) {
             return false
         }
 

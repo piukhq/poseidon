@@ -2,13 +2,13 @@ package com.bink.localhero.screens.wallet
 
 import android.util.Log
 import android.view.LayoutInflater
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.WalletFragmentBinding
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
+import com.bink.localhero.model.wallet.LoyaltyCard
 import com.bink.localhero.model.wallet.PaymentCard
 import com.bink.localhero.model.wallet.UserWallet
 import com.bink.localhero.screens.wallet.adapter.PlansAdapter
@@ -54,14 +54,37 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
         Log.d("Wallet", plans.size.toString())
     }
 
-    private fun showWallet(wallet: UserWallet){
+    private fun showWallet(wallet: UserWallet) {
         walletAdapter.setData(wallet)
     }
 
-    private fun onCardClick(item: Any){
-        when(item){
+    private fun onCardClick(item: Any) {
+        when (item) {
             is PaymentCard -> {
-                Toast.makeText(requireContext(), item.cardNickname, Toast.LENGTH_LONG).show()
+                requireContext().showDialog(
+                    title = "Payment Card Details",
+                    message = "Id: ${item.id}" +
+                            "\nName: ${item.nameOnCard}" +
+                            "\nNickname: ${item.cardNickname}" +
+                            "\nLast Four: ${item.lastFourDigits}" +
+                            "\nExpiry: ${item.expiryMonth}/${item.expiryYear}" +
+                            "\nStatus: ${item.status}" +
+                            "\nHas Links: ${item.pllLinks?.isNotEmpty()}",
+                    positiveBtn = "Done"
+                )
+            }
+            is LoyaltyCard -> {
+                requireContext().showDialog(
+                    title = "Loyalty Card Details",
+                    message = "Id: ${item.id}" +
+                            "\nPlan Name: ${item.loyaltyPlanName}" +
+                            "\nBalance: ${item.balance?.currentDisplayValue}" +
+                            "\nPlan Id: ${item.loyaltyPlanId}" +
+                            "\nHas Transactions: ${item.transactions?.isNotEmpty()}" +
+                            "\nStatus: ${item.status?.description}" +
+                            "\nHas Vouchers: ${item.vouchers?.isNotEmpty()}",
+                    positiveBtn = "Done"
+                )
             }
         }
     }
