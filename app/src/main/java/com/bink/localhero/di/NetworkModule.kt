@@ -1,7 +1,10 @@
 package com.bink.localhero.di
 
+import RELEASE_BUILD_TYPE
+import com.bink.localhero.BuildConfig
 import com.bink.localhero.data.remote.ApiService
 import com.bink.localhero.utils.BASE_URL
+import com.bink.localhero.utils.Keys
 import com.bink.localhero.utils.LocalStoreUtils
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -41,9 +44,13 @@ fun provideDefaultOkHttpClient(): OkHttpClient {
         val newRequest = chain.request().newBuilder()
             .header("Content-Type", "application/json")
             .header("Authorization", " Bearer $jwtToken")
-            .url(request)
-            .build()
-        val response = chain.proceed(newRequest)
+
+        if (BuildConfig.BUILD_TYPE != RELEASE_BUILD_TYPE) {
+            newRequest.header("Bink-Test-Auth", Keys.binkTestAuthToken()).url(request)
+        } else {
+            newRequest.url(request)
+        }
+        val response = chain.proceed(newRequest.build())
         response
     }
 
