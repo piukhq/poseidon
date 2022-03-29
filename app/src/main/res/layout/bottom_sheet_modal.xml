@@ -12,14 +12,14 @@
         android:text="@string/poseidon_god_mode_title"
         android:textStyle="bold"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/img_modal_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.207"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/img_modal_icon"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_modal_icon"
         android:layout_width="50dp"
         android:layout_marginStart="@dimen/margin_8dp"
         android:layout_height="50dp"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/img_modal_icon" />
 
     <TextView
         android:id="@+id/tv_settings"
