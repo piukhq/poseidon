@@ -19,5 +19,9 @@ data class PaymentCard(
     @Json(name = "pll_links")
     val pllLinks: List<PaymentCardPllLink>?,
     @Json(name = "status")
-    val status: String?
+    val status: String?,
+    @Json(name = "last_four_digits")
+    val lastFourDigits: Int?,
+    @Json(name = "provider")
+    val provider: String?
 )

@@ -21,5 +21,7 @@ data class LoyaltyCard(
     @Json(name = "transactions")
     val transactions: List<Transaction>?,
     @Json(name = "vouchers")
-    val vouchers: List<Voucher>?
+    val vouchers: List<Voucher>?,
+    @Json(name = "loyalty_plan_name")
+    val loyaltyPlanName: String?
 )

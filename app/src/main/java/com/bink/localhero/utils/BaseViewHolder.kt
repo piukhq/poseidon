@@ -5,5 +5,6 @@ import androidx.viewbinding.ViewBinding
 
 abstract class BaseViewHolder<T>(viewDataBinding: ViewBinding) :
     RecyclerView.ViewHolder(viewDataBinding.root) {
-    abstract fun bind(item: T)
+    open fun bind(item: T) {}
+    open fun bind(item: T, isLastItem: Boolean) {}
 }

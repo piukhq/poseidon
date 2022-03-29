@@ -67,9 +67,9 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
     }
 
     private fun showError(exception: Exception?) {
-        val httpException = exception as HttpException
+        val httpException = exception as? HttpException
 
-        if (httpException.code() == 401) {
+        if (httpException?.code() ?: 0 == 401) {
             requireContext().showDialog(
                 title = getString(R.string.error_title),
                 message = getString(R.string.login_invalid_token),
