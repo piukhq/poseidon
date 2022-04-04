@@ -13,7 +13,7 @@ import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ScanBarcodeFragment : BaseFragment<ScanBarcodeViewModel, FragmentScanBarcodeBinding>()  {
+class ScanBarcodeFragment : BaseFragment<ScanBarcodeViewModel, FragmentScanBarcodeBinding>() {
 
     private val scanLauncher = registerForActivityResult(ScanContract()) { result ->
         if (result.contents == null) {
@@ -37,7 +37,7 @@ class ScanBarcodeFragment : BaseFragment<ScanBarcodeViewModel, FragmentScanBarco
             Toast.makeText(requireContext(), "Scanned: $token", Toast.LENGTH_LONG)
                 .show()
 
-            LocalStoreUtils.setAppSharedPref(KEY_TOKEN,token)
+            LocalStoreUtils.setAppSharedPref(KEY_TOKEN, token)
             findNavController().navigate(ScanBarcodeFragmentDirections.actionScanBarcodeFragmentToWalletFragment())
         }
     }
@@ -56,7 +56,7 @@ class ScanBarcodeFragment : BaseFragment<ScanBarcodeViewModel, FragmentScanBarco
         launchScanner()
     }
 
-    private fun launchScanner(){
+    private fun launchScanner() {
         val scanOption = ScanOptions()
         scanOption.setOrientationLocked(false)
         scanLauncher.launch(scanOption)

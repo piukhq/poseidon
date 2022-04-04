@@ -16,12 +16,15 @@ data class UserWallet(
     val paymentAccounts: List<PaymentCard>
 )
 
-fun UserWallet.asList() : List<Any>{
+fun UserWallet.asList(): List<Any> {
     return ArrayList<Any>().apply {
-        addAll(joins)
-        add(LOYALTY_HEADER)
-        addAll(loyaltyCards)
-        add(PAYMENT_HEADER)
-        addAll(paymentAccounts)
+        if (loyaltyCards.isNotEmpty()) {
+            add(LOYALTY_HEADER)
+            addAll(loyaltyCards)
+        }
+        if (paymentAccounts.isNotEmpty()) {
+            add(PAYMENT_HEADER)
+            addAll(paymentAccounts)
+        }
     }
 }

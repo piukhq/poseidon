@@ -1,6 +1,5 @@
 package com.bink.localhero.screens.add_payment_card
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +11,6 @@ import com.bink.localhero.model.payment_account.SpreedlyPaymentCard
 import com.bink.localhero.model.payment_account.SpreedlyPaymentMethod
 import com.bink.localhero.utils.AddPaymentCardUiState
 import com.bink.localhero.utils.Keys
-import com.bink.localhero.utils.WalletUiState
 import kotlinx.coroutines.launch
 
 class AddPaymentCardViewModel(private val addPaymentCardRepository: PaymentCardRepository) :

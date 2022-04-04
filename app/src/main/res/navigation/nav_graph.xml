@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_wallet"
+            app:destination="@id/walletFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -22,12 +25,6 @@
         <action
             android:id="@+id/action_loginFragment_to_scanBarcodeFragment"
             app:destination="@id/scanBarcodeFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_addPaymentCardFragment"
-            app:destination="@id/addPaymentCardFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_wallet"
-            app:destination="@id/walletFragment" />
     </fragment>
     <fragment
         android:id="@+id/scanBarcodeFragment"
@@ -55,10 +52,6 @@
         android:name="com.bink.localhero.screens.add_payment_card.AddPaymentCardFragment"
         android:label="fragment_add_payment_card"
         tools:layout="@layout/fragment_add_payment_card">
-
-        <action
-            android:id="@+id/action_addPaymentCard_to_wallet"
-            app:destination="@id/walletFragment" />
 
     </fragment>
 
