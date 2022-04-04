@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/img_modal_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_modal_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/img_modal_icon" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_modal_icon"
