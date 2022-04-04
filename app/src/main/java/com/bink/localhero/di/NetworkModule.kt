@@ -1,6 +1,5 @@
 package com.bink.localhero.di
 
-import RELEASE_BUILD_TYPE
 import com.bink.localhero.BuildConfig
 import com.bink.localhero.data.remote.ApiService
 import com.bink.localhero.utils.BASE_URL
