@@ -7,4 +7,9 @@
     <dimen name="plan_item_padding">16dp</dimen>
     <dimen name="payment_value_padding">4dp</dimen>
     <dimen name="wallet_header_size">25sp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+    <dimen name="margin_26dp">26dp</dimen>
+    <dimen name="padding_42dp">42dp</dimen>
 </resources>

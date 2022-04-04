@@ -23,6 +23,7 @@ android {
 
     buildTypes {
         release {
+            //signingConfig signingConfigs.debug
             minifyEnabled true
             shrinkResources true
             debuggable false
@@ -45,19 +46,19 @@ android {
         }
 
         beta {
-        debuggable true
-        applicationIdSuffix ".beta"
+            debuggable true
+            applicationIdSuffix ".beta"
 //      Add appropriate signing config
 //      signingConfig signingConfigs.binkSigningConfig
-        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        android.applicationVariants.all { variant ->
-            variant.outputs.all {
-                outputFileName = "Bink_${android.defaultConfig.versionName}_${variant.buildType.name}.apk"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "Bink_${android.defaultConfig.versionName}_${variant.buildType.name}.apk"
+                }
             }
+            ext.betaDistributionGroupAliases = "internal-testing"
+            ext.betaDistributionNotifications = true
         }
-        ext.betaDistributionGroupAliases = "internal-testing"
-        ext.betaDistributionNotifications = true
-    }
 
     }
     compileOptions {

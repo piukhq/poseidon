@@ -1,5 +1,7 @@
 package com.bink.localhero.screens.wallet
 
+import android.content.DialogInterface
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import androidx.navigation.fragment.findNavController
@@ -36,6 +38,10 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
         setupRecyclerView()
         //viewModel.getPlans()
         viewModel.getWallet()
+        
+        binding.imgMore.setOnClickListener {
+            findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToModalBottomSheet())
+        }
     }
 
     override fun observeViewModel() {

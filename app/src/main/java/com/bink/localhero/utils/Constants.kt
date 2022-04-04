@@ -19,3 +19,4 @@ const val SPACE = " "
 
 const val LOYALTY_HEADER = "Loyalty Cards"
 const val PAYMENT_HEADER = "Payment Cards"
+const val RELEASE_BUILD_TYPE = "release"
