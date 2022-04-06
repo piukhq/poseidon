@@ -8,4 +8,10 @@
     <string name="name_on_card">Name on Card</string>
     <string name="nickname">Nickname</string>
     <string name="expiry">Expiry (MM/YY)</string>
+    <string name="error_title">Error</string>
+    <string name="try_again">Try Again</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_invalid_token">It appears that your token is invalid</string>
+    <string name="wallet_title">Wallet</string>
+    <string name="unexpected_error">An unexpected error has happened</string>
 </resources>

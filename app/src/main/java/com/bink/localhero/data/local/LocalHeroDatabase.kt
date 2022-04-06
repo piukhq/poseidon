@@ -2,7 +2,7 @@ package com.bink.localhero.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.bink.localhero.model.PaymentCard
+import com.bink.localhero.model.loyalty_plan.PaymentCard
 
 @Database(
     entities = [PaymentCard::class],
