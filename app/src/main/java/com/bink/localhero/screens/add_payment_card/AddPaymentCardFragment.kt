@@ -148,6 +148,12 @@ class AddPaymentCardFragment :
     }
 
     private fun postCard() {
+        binding.etExpiry.text.toString().let {
+            if (!it.formatDate().contentEquals(it)) {
+                binding.etExpiry.setText(it.formatDate())
+            }
+        }
+
         viewModel.sendPaymentCardToSpreedly(
             binding.etCardNumber.text.toString(),
             getPaymentAccount()
