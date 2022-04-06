@@ -55,6 +55,14 @@
 
     </fragment>
 
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.bink.localhero.screens.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map">
+
+    </fragment>
+
     <dialog
         android:id="@+id/modalBottomSheet"
         android:name="com.bink.localhero.screens.dialog.ModalBottomSheet"
@@ -62,6 +70,9 @@
         <action
             android:id="@+id/action_modalBottomSheet_to_addPaymentCardFragment"
             app:destination="@id/addPaymentCardFragment" />
+        <action
+            android:id="@+id/action_modalBottomSheet_to_map"
+            app:destination="@id/mapFragment" />
     </dialog>
 
 </navigation>
