@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
@@ -140,5 +142,10 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
 
+    //Maps
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.9'
 
 }

@@ -1,0 +1,2533 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22r@4hq-8ms-psq",
+        "parent_placekey": "22p-226@4hq-8ms-psq",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "4 Canalside, Paddington",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W2 1HH",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-12-21",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.174962,
+          51.516136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzw-222@4hj-23n-7yv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "103 Gloucester Rd, South Kensington",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW7 4SZ",
+        "iso_country_code": "GB",
+        "phone_number": "+442072075305",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:30\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.184188,
+          51.493901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22x-222@4hj-23d-6zf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "102-104 Shepherds Bush Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W6 7PD",
+        "iso_country_code": "GB",
+        "phone_number": "+442076029233",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"19:00\"]], \"Tue\": [[\"6:45\", \"19:00\"]], \"Wed\": [[\"6:45\", \"19:00\"]], \"Thu\": [[\"6:45\", \"19:00\"]], \"Fri\": [[\"6:45\", \"19:00\"]], \"Sat\": [[\"6:45\", \"19:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.222302,
+          51.499443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-222@4hq-8pb-zvf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "24-25 Nelson Road, Greenwich",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SE10 9JB",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-11-01",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.114443,
+          51.578392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22m-223@4hq-8m8-4jv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "64 Hampstead High Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW3 1QH",
+        "iso_country_code": "GB",
+        "phone_number": "+442074338546",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:30\"]], \"Tue\": [[\"6:30\", \"19:30\"]], \"Wed\": [[\"6:30\", \"19:30\"]], \"Thu\": [[\"6:30\", \"19:30\"]], \"Fri\": [[\"6:30\", \"19:30\"]], \"Sat\": [[\"6:30\", \"19:30\"]], \"Sun\": [[\"6:30\", \"19:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.177976,
+          51.556122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23n-222@4hj-249-249",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "11-13 Station Parade, Kew",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "TW9 3PT",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"8:00\", \"18:00\"]], \"Sun\": [[\"8:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-08-28",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2862,
+          51.477376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22c@4hq-8p2-jjv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "70 Fortis Green Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "N10 3HN",
+        "iso_country_code": "GB",
+        "phone_number": "+442088159698",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.146141,
+          51.590204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22k-223@4hh-zrx-q4v",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "91 Dulwich Village",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SE21 7BJ",
+        "iso_country_code": "GB",
+        "phone_number": "+441494674529",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"20:00\"]], \"Tue\": [[\"6:30\", \"20:00\"]], \"Wed\": [[\"6:30\", \"20:00\"]], \"Thu\": [[\"6:30\", \"20:00\"]], \"Fri\": [[\"6:30\", \"20:00\"]], \"Sat\": [[\"6:30\", \"20:00\"]], \"Sun\": [[\"7:00\", \"19:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.085026,
+          51.448945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-23m@4hj-23j-dvz",
+        "parent_placekey": "zzw-222@4hj-23j-dvz",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "5 Lacy Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW15 1NH",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:30\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.216151,
+          51.464142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22d-222@4hh-zr7-yd9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "4 High Street",
+        "city": "Reigate",
+        "region": "Surrey",
+        "postal_code": "RH2 9BG",
+        "iso_country_code": "GB",
+        "phone_number": "+441737223772",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:30\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-05-29",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.205975,
+          51.237834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22d@4hq-8m7-r49",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "1 South End Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW3 2PT",
+        "iso_country_code": "GB",
+        "phone_number": "+442074338053",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:30\"]], \"Tue\": [[\"6:30\", \"19:30\"]], \"Wed\": [[\"6:30\", \"19:30\"]], \"Thu\": [[\"6:30\", \"19:30\"]], \"Fri\": [[\"6:30\", \"19:30\"]], \"Sat\": [[\"6:30\", \"19:30\"]], \"Sun\": [[\"6:30\", \"19:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.165639,
+          51.554105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22q@4hq-8p9-tn5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "15 City North Place",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "N43FU",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:00\"]], \"Tue\": [[\"6:30\", \"19:00\"]], \"Wed\": [[\"6:30\", \"19:00\"]], \"Thu\": [[\"6:30\", \"19:00\"]], \"Fri\": [[\"6:30\", \"19:00\"]], \"Sat\": [[\"8:00\", \"19:00\"]], \"Sun\": [[\"8:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-10-24",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.107333,
+          51.564397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22f@4hq-3w4-vfz",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "251 Banbury Road",
+        "city": "Oxford",
+        "region": "Oxfordshire",
+        "postal_code": "OX2 7HN",
+        "iso_country_code": "GB",
+        "phone_number": "+441865513450",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"8:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.265289,
+          51.777823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "225-223@4hq-8pf-fvf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "21 Swains Lane",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "N6 6QX",
+        "iso_country_code": "GB",
+        "phone_number": "+442083485293",
+        "open_hours": "{ \"Mon\": [[\"6:00\", \"18:45\"]], \"Tue\": [[\"6:00\", \"18:45\"]], \"Wed\": [[\"6:00\", \"18:45\"]], \"Thu\": [[\"6:00\", \"18:45\"]], \"Fri\": [[\"6:00\", \"18:45\"]], \"Sat\": [[\"6:00\", \"18:45\"]], \"Sun\": [[\"6:00\", \"18:45\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.149552,
+          51.562097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22b@4hq-3wj-68v",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "21-22 Little Clarendon Street",
+        "city": "Oxford",
+        "region": "Oxfordshire",
+        "postal_code": "OX1 2HU",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"8:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.262556,
+          51.758369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "246-223@4hh-w6b-dsq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "104 High Street",
+        "city": "Godalming",
+        "region": "Surrey",
+        "postal_code": "GU7 1DW",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"8:00\", \"18:30\"]], \"Sun\": [[\"8:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-07-24",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.615012,
+          51.185574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "224-224@4hh-zvq-fvf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "33-35 Exmouth Market",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "EC1R 4QL",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:30\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.109411,
+          51.525992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "224-223@4hj-23k-8d9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "240-242 Kensington High Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W8 6ND",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:30\"]], \"Tue\": [[\"6:30\", \"19:30\"]], \"Wed\": [[\"6:30\", \"19:30\"]], \"Thu\": [[\"6:30\", \"19:30\"]], \"Fri\": [[\"6:30\", \"19:30\"]], \"Sat\": [[\"6:30\", \"19:30\"]], \"Sun\": [[\"6:30\", \"19:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.199822,
+          51.498933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "227-225@4hh-zvh-s89",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "70 Holland Street Block C",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SE1 9NX",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:30\", \"17:30\"]], \"Tue\": [[\"7:30\", \"17:30\"]], \"Wed\": [[\"7:30\", \"17:30\"]], \"Thu\": [[\"7:30\", \"17:30\"]], \"Fri\": [[\"7:30\", \"17:30\"]], \"Sat\": [[\"8:00\", \"18:00\"]], \"Sun\": [[\"8:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.100561,
+          51.506692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-229@4hq-8pf-789",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "88-90 Highgate High Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "N6 5HX",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"19:00\"]], \"Tue\": [[\"6:45\", \"19:00\"]], \"Wed\": [[\"6:45\", \"19:00\"]], \"Thu\": [[\"6:45\", \"19:00\"]], \"Fri\": [[\"6:45\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.148959,
+          51.571191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22b-224@4hh-zsz-t9z",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "22-24 Buckingham Palace Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW1W 0QP",
+        "iso_country_code": "GB",
+        "phone_number": "+442078340819",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"17:00\"]], \"Tue\": [[\"7:00\", \"17:00\"]], \"Wed\": [[\"7:00\", \"17:00\"]], \"Thu\": [[\"7:00\", \"17:00\"]], \"Fri\": [[\"7:00\", \"17:00\"]], \"Sat\": [[\"8:00\", \"17:30\"]], \"Sun\": [[\"8:00\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-04-10",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.144514,
+          51.497619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "249-223@4hq-8mq-6ff",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "12 Westbourne Grove 12",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W2 5RA",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.189215,
+          51.515797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "249-224@4hq-4qm-k2k",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "19 Tunsgate",
+        "city": "Guildford",
+        "region": "Surrey",
+        "postal_code": "GU1 3QS",
+        "iso_country_code": "GB",
+        "phone_number": "+441483303348",
+        "open_hours": "{ \"Mon\": [[\"8:00\", \"17:00\"]], \"Tue\": [[\"8:00\", \"17:00\"]], \"Wed\": [[\"8:00\", \"17:00\"]], \"Thu\": [[\"8:00\", \"17:00\"]], \"Fri\": [[\"8:00\", \"17:00\"]], \"Sat\": [[\"8:00\", \"17:00\"]], \"Sun\": [[\"8:00\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.571946,
+          51.23511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22s-224@4hq-8mt-bx5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "167 Haverstock Hill",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW3 4QT",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"19:00\"]], \"Tue\": [[\"6:45\", \"19:00\"]], \"Wed\": [[\"6:45\", \"19:00\"]], \"Thu\": [[\"6:45\", \"19:00\"]], \"Fri\": [[\"6:45\", \"19:00\"]], \"Sat\": [[\"6:45\", \"19:00\"]], \"Sun\": [[\"6:45\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.164523,
+          51.549888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22q-224@4hq-8nq-ndv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "75 Salusbury Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW6 6NH",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"20:00\"]], \"Tue\": [[\"6:30\", \"20:00\"]], \"Wed\": [[\"6:30\", \"20:00\"]], \"Thu\": [[\"6:30\", \"20:00\"]], \"Fri\": [[\"6:30\", \"20:00\"]], \"Sat\": [[\"6:30\", \"20:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.20495,
+          51.535507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23m-223@4hj-ztz-mp9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "87 Lauriston Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "E9 7HJ",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:30\"]], \"Tue\": [[\"7:00\", \"18:30\"]], \"Wed\": [[\"7:00\", \"18:30\"]], \"Thu\": [[\"7:00\", \"18:30\"]], \"Fri\": [[\"7:00\", \"18:30\"]], \"Sat\": [[\"6:45\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.044569,
+          51.537814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22p-223@4hj-23n-f75",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "341 Fulham Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW10 9TW",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.180714,
+          51.485942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22p-223@4hq-8pm-yvz",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "48 The Broadway",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "N8 9TP",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:00\"]], \"Tue\": [[\"6:30\", \"19:00\"]], \"Wed\": [[\"6:30\", \"19:00\"]], \"Thu\": [[\"6:30\", \"19:00\"]], \"Fri\": [[\"6:30\", \"19:00\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"6:30\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.123208,
+          51.579673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22b@4hq-4kp-qj9",
+        "parent_placekey": "zzy-22r@4hq-4kp-qvf",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "7, The Avenue, The Lexicon, Bracknell",
+        "city": "Bracknell",
+        "region": "Berkshire",
+        "postal_code": "RG12 1EA",
+        "iso_country_code": "GB",
+        "phone_number": "+441344868331",
+        "open_hours": "{ \"Mon\": [[\"8:00\", \"19:00\"]], \"Tue\": [[\"8:00\", \"19:00\"]], \"Wed\": [[\"8:00\", \"19:00\"]], \"Thu\": [[\"8:00\", \"19:00\"]], \"Fri\": [[\"8:00\", \"19:00\"]], \"Sat\": [[\"8:00\", \"19:00\"]], \"Sun\": [[\"8:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-12-21",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.750265,
+          51.416441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "234-223@4hh-zsp-nyv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "10-12 Old Town",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW4 0JY",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.141524,
+          51.464752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23p-223@4hh-wwq-g6k",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "93 North Road",
+        "city": "Brighton",
+        "region": "East Sussex",
+        "postal_code": "BN1 1YE",
+        "iso_country_code": "GB",
+        "phone_number": "+441273601661",
+        "open_hours": "{ \"Mon\": [[\"8:00\", \"17:00\"]], \"Tue\": [[\"8:00\", \"17:00\"]], \"Wed\": [[\"8:00\", \"17:00\"]], \"Thu\": [[\"8:00\", \"17:00\"]], \"Fri\": [[\"8:00\", \"17:00\"]], \"Sat\": [[\"8:00\", \"17:30\"]], \"Sun\": [[\"8:00\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.138307,
+          50.825664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "223-224@4hj-23d-pjv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "350 Old York Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW18 1SS",
+        "iso_country_code": "GB",
+        "phone_number": "+442088779567",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"8:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.189012,
+          51.460084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22v-223@4hj-23t-5xq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "537-539 Garratt Lane",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW18 4SR",
+        "iso_country_code": "GB",
+        "phone_number": "+442089460537",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"18:30\"]], \"Tue\": [[\"6:45\", \"18:30\"]], \"Wed\": [[\"6:45\", \"18:30\"]], \"Thu\": [[\"6:45\", \"18:30\"]], \"Fri\": [[\"6:45\", \"18:30\"]], \"Sat\": [[\"8:00\", \"19:00\"]], \"Sun\": [[\"8:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2019-07-01",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.187016,
+          51.441314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22m@4hh-zzy-t7q",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "12-13 Lichfield Terrace, Sheen Road",
+        "city": "Richmond",
+        "region": "Greater London",
+        "postal_code": "TW9 1AE",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"17:30\"]], \"Tue\": [[\"6:45\", \"17:30\"]], \"Wed\": [[\"6:45\", \"17:30\"]], \"Thu\": [[\"6:45\", \"17:30\"]], \"Fri\": [[\"6:45\", \"17:30\"]], \"Sat\": [[\"6:45\", \"18:30\"]], \"Sun\": [[\"6:45\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.300388,
+          51.461226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-235@4hj-22k-c89",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "35 Church Street",
+        "city": "Twickenham",
+        "region": "Greater London",
+        "postal_code": "TW1 3NR",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-05-08",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.327504,
+          51.446577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "227-224@4hj-23h-yn5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "49 Church Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW13 9HH",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:00\"]], \"Tue\": [[\"6:30\", \"19:00\"]], \"Wed\": [[\"6:30\", \"19:00\"]], \"Thu\": [[\"6:30\", \"19:00\"]], \"Fri\": [[\"6:30\", \"19:00\"]], \"Sat\": [[\"6:30\", \"19:00\"]], \"Sun\": [[\"6:30\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.244583,
+          51.474192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22k@4hq-4yf-649",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "3 Castle Street",
+        "city": "Farnham",
+        "region": "Surrey",
+        "postal_code": "GU9 7JA",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"17:00\"]], \"Tue\": [[\"7:00\", \"17:00\"]], \"Wed\": [[\"7:00\", \"17:00\"]], \"Thu\": [[\"7:00\", \"17:00\"]], \"Fri\": [[\"7:00\", \"17:00\"]], \"Sat\": [[\"7:00\", \"17:00\"]], \"Sun\": [[\"7:00\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.799494,
+          51.215165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23b-222@4hh-zvq-vj9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "305-307 Upper Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "N1 2TU",
+        "iso_country_code": "GB",
+        "phone_number": "+442072267105",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:30\"]], \"Tue\": [[\"7:00\", \"18:30\"]], \"Wed\": [[\"7:00\", \"18:30\"]], \"Thu\": [[\"7:00\", \"18:30\"]], \"Fri\": [[\"7:00\", \"18:30\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.102331,
+          51.537998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22c@4hj-248-3kf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "Longfield Avenue Dickens Yard Unit 18",
+        "city": "Ealing",
+        "region": "Greater London",
+        "postal_code": "W52TD",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"6:30\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.30574,
+          51.513266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "225-223@4hj-244-6x5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "250 Wimbledon Park Road Bank House",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW19 6NL",
+        "iso_country_code": "GB",
+        "phone_number": "+442087803861",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.206925,
+          51.444653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22d-224@4hj-23f-ks5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "739 Fulham Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW6 5UL",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:00\"]], \"Tue\": [[\"6:30\", \"19:00\"]], \"Wed\": [[\"6:30\", \"19:00\"]], \"Thu\": [[\"6:30\", \"19:00\"]], \"Fri\": [[\"6:30\", \"19:00\"]], \"Sat\": [[\"6:30\", \"19:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.202492,
+          51.476776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22d-223@4hq-8mv-2c5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "204 Kentish Town Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW5 2AD",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"7:00\", \"19:00\"]], \"Sun\": [[\"7:30\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.140962,
+          51.548124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-229@4hh-zvh-3bk",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "One Blackfriars Road",
+        "city": "Southwark",
+        "region": "Greater London",
+        "postal_code": "SE1 9PB",
+        "iso_country_code": "GB",
+        "phone_number": "+442039875656",
+        "open_hours": "{ \"Mon\": [[\"7:30\", \"17:00\"]], \"Tue\": [[\"7:30\", \"17:00\"]], \"Wed\": [[\"7:30\", \"17:00\"]], \"Thu\": [[\"7:30\", \"17:00\"]], \"Fri\": [[\"7:30\", \"17:00\"]], \"Sat\": [[\"7:30\", \"17:00\"]], \"Sun\": [[\"8:00\", \"16:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.104799,
+          51.50776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22m@4hq-8nj-7bk",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "1 - 3 Station Terrace Unicorn House",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW105RQ",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"20:00\"]], \"Tue\": [[\"6:45\", \"20:00\"]], \"Wed\": [[\"6:45\", \"20:00\"]], \"Thu\": [[\"6:45\", \"20:00\"]], \"Fri\": [[\"6:45\", \"20:00\"]], \"Sat\": [[\"6:45\", \"20:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.21933,
+          51.53427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-223@4hq-8mw-bx5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "12 Handyside Street, London, N1C 4DN",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "VN02783",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"10:00\", \"17:00\"]], \"Tue\": [[\"8:00\", \"16:00\"]], \"Wed\": [[\"8:00\", \"16:00\"]], \"Thu\": [[\"8:00\", \"16:00\"]], \"Fri\": [[\"8:00\", \"16:00\"]], \"Sat\": [], \"Sun\": [] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-12-21",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.124815,
+          51.537562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22j@4hq-8mt-8qf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "35 - 37 Parkway",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW1 7PN",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.144164,
+          51.538224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22n@4hj-zsr-52k",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "55-57 High Street",
+        "city": "Wanstead",
+        "region": "Greater London",
+        "postal_code": "E11 2AE",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.025891,
+          51.578737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "24d-222@4hq-53t-y5f",
+        "parent_placekey": "zzw-227@4hq-53t-y5f",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "95 Peascod Street",
+        "city": "Windsor",
+        "region": "Berkshire",
+        "postal_code": "SL4 1DH",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"18:30\"]], \"Tue\": [[\"6:45\", \"18:30\"]], \"Wed\": [[\"6:45\", \"18:30\"]], \"Thu\": [[\"6:45\", \"18:30\"]], \"Fri\": [[\"6:45\", \"18:30\"]], \"Sat\": [[\"6:45\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.611447,
+          51.481151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-225@4hq-8m6-jjv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "30 Temple Fortune Parade",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW11 0QS",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:00\"]], \"Tue\": [[\"6:30\", \"18:00\"]], \"Wed\": [[\"6:30\", \"18:00\"]], \"Thu\": [[\"6:30\", \"18:00\"]], \"Fri\": [[\"6:30\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.199879,
+          51.583476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22k-223@4hq-8mq-rff",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "237 Elgin Avenue",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W9 1NJ",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"20:00\"]], \"Tue\": [[\"6:30\", \"20:00\"]], \"Wed\": [[\"6:30\", \"20:00\"]], \"Thu\": [[\"6:30\", \"20:00\"]], \"Fri\": [[\"6:30\", \"20:00\"]], \"Sat\": [[\"6:30\", \"20:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.186093,
+          51.530098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22d@4hj-243-8y9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "1 Station Parade, Balham High Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW12 9AZ",
+        "iso_country_code": "GB",
+        "phone_number": "+442086757776",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"19:00\"]], \"Tue\": [[\"6:30\", \"19:00\"]], \"Wed\": [[\"6:30\", \"19:00\"]], \"Thu\": [[\"6:30\", \"19:00\"]], \"Fri\": [[\"6:30\", \"19:00\"]], \"Sat\": [[\"6:30\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.153365,
+          51.44235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23b-222@4hq-8nr-ht9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "82 Walm Lane",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW2 4RA",
+        "iso_country_code": "GB",
+        "phone_number": "+442084593035",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"20:00\"]], \"Tue\": [[\"6:45\", \"20:00\"]], \"Wed\": [[\"6:45\", \"20:00\"]], \"Thu\": [[\"6:45\", \"20:00\"]], \"Fri\": [[\"6:45\", \"20:00\"]], \"Sat\": [[\"6:45\", \"20:00\"]], \"Sun\": [[\"6:45\", \"20:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.221592,
+          51.548457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22s-222@4hq-8pw-kcq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "88 The Broadway",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW7 3TB",
+        "iso_country_code": "GB",
+        "phone_number": "+442089061730",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:00\"]], \"Tue\": [[\"7:00\", \"19:00\"]], \"Wed\": [[\"7:00\", \"19:00\"]], \"Thu\": [[\"7:00\", \"19:00\"]], \"Fri\": [[\"7:00\", \"19:00\"]], \"Sat\": [[\"6:30\", \"19:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-03-06",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.244714,
+          51.615713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22x-225@4hh-zv9-zcq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "3 Blackheath Village",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SE3 9LA",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"7:00\", \"19:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00957,
+          51.465769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22y-222@4hq-4wt-kfz",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "20 Peach Street",
+        "city": "Wokingham",
+        "region": "Berkshire",
+        "postal_code": "RG40 1XG",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.832123,
+          51.410606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22j@4hj-zwd-zzz",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "199 High Street",
+        "city": "Loughton",
+        "region": "Essex",
+        "postal_code": "IG10 4LF",
+        "iso_country_code": "GB",
+        "phone_number": "+442085084121",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"17:30\"]], \"Tue\": [[\"7:00\", \"17:30\"]], \"Wed\": [[\"7:00\", \"17:30\"]], \"Thu\": [[\"7:00\", \"17:30\"]], \"Fri\": [[\"7:00\", \"17:30\"]], \"Sat\": [[\"7:00\", \"17:30\"]], \"Sun\": [[\"7:00\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.054063,
+          51.646058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22y-224@4hj-23z-rff",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "64 Northcote Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW11 6QL",
+        "iso_country_code": "GB",
+        "phone_number": "+442077382915",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"8:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.166369,
+          51.458474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "228-225@4hh-zst-mx5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "71 Abbeville Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW4 9JW",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.139521,
+          51.455016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "228-223@4hj-23n-gx5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "209 Kings Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW3 5ED",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"18:30\", \"19:00\"]], \"Tue\": [[\"6:30\", \"19:00\"]], \"Wed\": [[\"6:30\", \"19:00\"]], \"Thu\": [[\"6:30\", \"19:00\"]], \"Fri\": [[\"6:30\", \"19:00\"]], \"Sat\": [[\"6:30\", \"19:00\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.169814,
+          51.486818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22b-222@4hh-zvh-ch5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "28 York Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SE1 7ND",
+        "iso_country_code": "GB",
+        "phone_number": "+442039955277",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"17:30\"]], \"Tue\": [[\"6:30\", \"17:30\"]], \"Wed\": [[\"6:30\", \"17:30\"]], \"Thu\": [[\"6:30\", \"17:30\"]], \"Fri\": [[\"6:30\", \"17:30\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"8:00\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.116527,
+          51.502992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22q@4hq-8ms-bp9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "4-6 Seymour Place",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W1H 7NA",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:30\", \"17:00\"]], \"Tue\": [[\"7:30\", \"17:00\"]], \"Wed\": [[\"7:30\", \"17:00\"]], \"Thu\": [[\"7:30\", \"17:00\"]], \"Fri\": [[\"7:30\", \"17:00\"]], \"Sat\": [[\"7:30\", \"17:00\"]], \"Sun\": [[\"7:30\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.160963,
+          51.514631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-238@4hh-xp4-2kz",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "Unit 1, Blighs Court",
+        "city": "Sevenoaks",
+        "region": "Kent",
+        "postal_code": "TN13 1DD",
+        "iso_country_code": "GB",
+        "phone_number": "+441732905845",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-09-12",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.191963,
+          51.271717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22w-224@4hj-23k-tsq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "138 Portobello Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W11 2DZ",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"18:30\"]], \"Tue\": [[\"6:45\", \"18:30\"]], \"Wed\": [[\"6:45\", \"18:30\"]], \"Thu\": [[\"6:45\", \"18:30\"]], \"Fri\": [[\"6:45\", \"18:30\"]], \"Sat\": [[\"6:45\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.204024,
+          51.514537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22d@4hk-4rt-m49",
+        "parent_placekey": "zzy-22m@4hk-4rt-kxq",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "U59, Grafton Centre",
+        "city": "Cambridge",
+        "region": "Cambridgeshire",
+        "postal_code": "CB1 1PS",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"8:00\", \"16:00\"]], \"Tue\": [[\"8:00\", \"16:00\"]], \"Wed\": [[\"8:00\", \"16:00\"]], \"Thu\": [[\"8:00\", \"16:00\"]], \"Fri\": [[\"8:00\", \"16:00\"]], \"Sat\": [[\"8:00\", \"17:00\"]], \"Sun\": [[\"8:00\", \"16:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.131823,
+          52.206662
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22b-222@4hh-zvg-zxq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "73 The Cut",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SE1 8LL",
+        "iso_country_code": "GB",
+        "phone_number": "+442079288715",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"16:30\"]], \"Tue\": [[\"7:00\", \"16:30\"]], \"Wed\": [[\"7:00\", \"16:30\"]], \"Thu\": [[\"7:00\", \"16:30\"]], \"Fri\": [[\"7:00\", \"16:30\"]], \"Sat\": [[\"7:30\", \"17:30\"]], \"Sun\": [[\"8:00\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.108129,
+          51.502628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-23j@4hj-23n-9xq",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "45 Thurloe Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW7 2LQ",
+        "iso_country_code": "GB",
+        "phone_number": "+442075842152",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"17:00\"]], \"Tue\": [[\"7:00\", \"17:00\"]], \"Wed\": [[\"7:00\", \"17:00\"]], \"Thu\": [[\"7:00\", \"17:00\"]], \"Fri\": [[\"7:00\", \"17:00\"]], \"Sat\": [[\"7:30\", \"18:30\"]], \"Sun\": [[\"8:00\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.17436,
+          51.494518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22f@4hh-zk4-grk",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "2 High Street",
+        "city": "Cobham",
+        "region": "Surrey",
+        "postal_code": "KT11 3DZ",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"17:00\"]], \"Tue\": [[\"7:00\", \"17:00\"]], \"Wed\": [[\"7:00\", \"17:00\"]], \"Thu\": [[\"7:00\", \"17:00\"]], \"Fri\": [[\"7:00\", \"17:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"8:00\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-11-01",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.411078,
+          51.328814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22v@4hq-8mn-5j9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "5 Circus Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW8 6NX",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"19:30\"]], \"Tue\": [[\"7:00\", \"19:30\"]], \"Wed\": [[\"7:00\", \"19:30\"]], \"Thu\": [[\"7:00\", \"19:30\"]], \"Fri\": [[\"7:00\", \"19:30\"]], \"Sat\": [[\"7:00\", \"19:30\"]], \"Sun\": [[\"7:00\", \"19:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.171672,
+          51.53371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "zzy-22s@4hq-562-zs5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "1 Grove Court",
+        "city": "Beaconsfield",
+        "region": "Buckinghamshire",
+        "postal_code": "HP9 1QW",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-08-07",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.645107,
+          51.609487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22r-226@4hh-zss-gp9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "31-32 Battersea Square",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW11 3RA",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:00\"]], \"Tue\": [[\"6:30\", \"18:00\"]], \"Wed\": [[\"6:30\", \"18:00\"]], \"Thu\": [[\"6:30\", \"18:00\"]], \"Fri\": [[\"6:30\", \"18:00\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"7:30\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.175246,
+          51.474811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23v-224@4hq-8mp-7kf",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "128 Wardour Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W1F 8ZL",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:30\", \"16:00\"]], \"Tue\": [[\"7:30\", \"16:00\"]], \"Wed\": [[\"7:30\", \"16:00\"]], \"Thu\": [[\"7:30\", \"16:00\"]], \"Fri\": [[\"7:30\", \"16:00\"]], \"Sat\": [[\"8:00\", \"17:00\"]], \"Sun\": [[\"8:00\", \"16:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.134452,
+          51.51433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23j-223@4hj-23h-4vz",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "282-284 Chiswick High Road",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "W4 1PA",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:45\", \"19:30\"]], \"Tue\": [[\"6:45\", \"19:30\"]], \"Wed\": [[\"6:45\", \"19:30\"]], \"Thu\": [[\"6:45\", \"19:30\"]], \"Fri\": [[\"6:45\", \"19:30\"]], \"Sat\": [[\"7:00\", \"19:30\"]], \"Sun\": [[\"7:00\", \"19:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.259917,
+          51.492649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22g-224@4hj-23w-435",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "9 High Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW19 5DX",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"6:30\", \"18:30\"]], \"Tue\": [[\"6:30\", \"18:30\"]], \"Wed\": [[\"6:30\", \"18:30\"]], \"Thu\": [[\"6:30\", \"18:30\"]], \"Fri\": [[\"6:30\", \"18:30\"]], \"Sat\": [[\"6:30\", \"18:30\"]], \"Sun\": [[\"6:30\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.216217,
+          51.424399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22d-223@4hq-8my-52k",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "216A West End Lane",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "NW6 1UX",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:30\"]], \"Tue\": [[\"7:00\", \"18:30\"]], \"Wed\": [[\"7:00\", \"18:30\"]], \"Thu\": [[\"7:00\", \"18:30\"]], \"Fri\": [[\"7:00\", \"18:30\"]], \"Sat\": [[\"7:00\", \"18:30\"]], \"Sun\": [[\"7:00\", \"18:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.191071,
+          51.550549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22b-226@4hq-8mp-bff",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "11-13 Bayley St",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "WC1B 3HD",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:30\", \"18:00\"]], \"Tue\": [[\"7:30\", \"18:00\"]], \"Wed\": [[\"7:30\", \"18:00\"]], \"Thu\": [[\"7:30\", \"18:00\"]], \"Fri\": [[\"7:30\", \"18:00\"]], \"Sat\": [[\"7:30\", \"18:00\"]], \"Sun\": [[\"7:30\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.131949,
+          51.518809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "22m-223@4hh-xkz-649",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "21 High Street",
+        "city": "Tunbridge Wells",
+        "region": "Kent",
+        "postal_code": "TN1 1UT",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:00\", \"18:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "2021-03-13",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.26241,
+          51.128465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23f-223@4hh-zsz-zs5",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "26 Churton Street",
+        "city": "London",
+        "region": "Greater London",
+        "postal_code": "SW1V 2LP",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"17:30\"]], \"Tue\": [[\"7:00\", \"17:30\"]], \"Wed\": [[\"7:00\", \"17:30\"]], \"Thu\": [[\"7:00\", \"17:30\"]], \"Fri\": [[\"7:00\", \"17:30\"]], \"Sat\": [[\"7:00\", \"17:30\"]], \"Sun\": [[\"7:00\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.139171,
+          51.491841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "23f-223@4hq-8km-7dv",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "6 Market Place",
+        "city": "St. Albans",
+        "region": "Hertfordshire",
+        "postal_code": "AL3 5DG",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:30\", \"17:00\"]], \"Tue\": [[\"7:30\", \"17:00\"]], \"Wed\": [[\"7:30\", \"17:00\"]], \"Thu\": [[\"7:30\", \"17:00\"]], \"Fri\": [[\"7:30\", \"17:00\"]], \"Sat\": [[\"7:30\", \"17:00\"]], \"Sun\": [[\"7:30\", \"17:00\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.340039,
+          51.751322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "placekey": "226-223@4hh-wwt-fj9",
+        "parent_placekey": "",
+        "location_name": "GAIL's Bread",
+        "safegraph_brand_ids": "SG_BRAND_1978982f6d2eb698",
+        "brands": "GAIL's Bread",
+        "top_category": "Restaurants and Other Eating Places",
+        "sub_category": "Snack and Nonalcoholic Beverage Bars",
+        "naics_code": 722515,
+        "street_address": "157 Church Road",
+        "city": "Hove",
+        "region": "East Sussex",
+        "postal_code": "BN3 2AD",
+        "iso_country_code": "GB",
+        "phone_number": "",
+        "open_hours": "{ \"Mon\": [[\"7:00\", \"18:00\"]], \"Tue\": [[\"7:00\", \"18:00\"]], \"Wed\": [[\"7:00\", \"18:00\"]], \"Thu\": [[\"7:00\", \"18:00\"]], \"Fri\": [[\"7:00\", \"18:00\"]], \"Sat\": [[\"7:00\", \"18:00\"]], \"Sun\": [[\"7:30\", \"17:30\"]] }",
+        "category_tags": "Brunch,Pastries,Snacks,Drinks,Counter Service,Breakfast,Take Out and Delivery Only,Catering,Bakery",
+        "opened_on": "",
+        "closed_on": "",
+        "tracking_closed_since": "2021-02-12",
+        "geometry_type": "POLYGON"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.174275,
+          50.828329
+        ]
+      }
+    }
+  ]
+}

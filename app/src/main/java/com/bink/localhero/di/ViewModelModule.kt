@@ -4,6 +4,7 @@ import com.bink.localhero.data.remote.ApiService
 import com.bink.localhero.data.remote.PaymentCardRepository
 import com.bink.localhero.data.remote.SpreedlyService
 import com.bink.localhero.screens.add_payment_card.AddPaymentCardViewModel
+import com.bink.localhero.screens.map.MapViewModel
 import com.bink.localhero.screens.wallet.WalletRepository
 import com.bink.localhero.screens.wallet.WalletViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -21,6 +22,7 @@ val viewModelModule = module {
 
     viewModel { WalletViewModel(get()) }
     viewModel { AddPaymentCardViewModel(get()) }
+    viewModel { MapViewModel() }
 }
 
 fun provideWalletRepository(apiService: ApiService): WalletRepository = WalletRepository(apiService)
