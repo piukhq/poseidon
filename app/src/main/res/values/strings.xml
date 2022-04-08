@@ -12,4 +12,10 @@
     <string name="add_payment_card_text">Add payment card</string>
     <string name="settings_text">Settings</string>
     <string name="cancel_text">Cancel</string>
+    <string name="error_title">Error</string>
+    <string name="try_again">Try Again</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_invalid_token">It appears that your token is invalid</string>
+    <string name="wallet_title">Wallet</string>
+    <string name="unexpected_error">An unexpected error has happened</string>
 </resources>

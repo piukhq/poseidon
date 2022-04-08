@@ -2,48 +2,50 @@ package com.bink.localhero.screens.wallet
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bink.localhero.R
+import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.WalletFragmentBinding
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
-import com.bink.localhero.screens.wallet.adapter.WalletAdapter
-import com.bink.localhero.utils.ui_state.WalletUiState
+import com.bink.localhero.model.wallet.PaymentCard
+import com.bink.localhero.model.wallet.UserWallet
+import com.bink.localhero.screens.wallet.adapter.PlansAdapter
+import com.bink.localhero.screens.wallet.adapter.UserWalletAdapter
+import com.bink.localhero.utils.WalletUiState
+import com.bink.localhero.utils.showDialog
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import retrofit2.HttpException
-import java.lang.Exception
 
-class WalletFragment : Fragment() {
+class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
 
-    private val viewModel: WalletViewModel by viewModel()
-    private var _binding: WalletFragmentBinding? = null
-    private val binding get() = _binding!!
-    private lateinit var walletAdapter: WalletAdapter
+    private lateinit var plansAdapter: PlansAdapter
+    private lateinit var walletAdapter: UserWalletAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = WalletFragmentBinding.inflate(inflater, container, false)
-        return binding.root
+    override val bindingInflater: (LayoutInflater) -> WalletFragmentBinding
+        get() = WalletFragmentBinding::inflate
+
+    override val viewModel: WalletViewModel by viewModel()
+
+    override fun setup() {
+        plansAdapter = PlansAdapter(mutableListOf())
+        walletAdapter = UserWalletAdapter(onClickListener = {
+            onCardClick(it)
+        })
+        setupRecyclerView()
+        //viewModel.getPlans()
+        viewModel.getWallet()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        walletAdapter = WalletAdapter(mutableListOf())
-        setupRecyclerView()
-        viewModel.getPlans()
-
+    override fun observeViewModel() {
         viewModel.walletUiState.observe(viewLifecycleOwner) {
             when (it) {
-                is WalletUiState.Loading -> showProgress()
+                is WalletUiState.Loading -> toggleProgressDialog()
                 is WalletUiState.Error -> showError(it.exception)
-                is WalletUiState.Success -> showPlans(it.plans)
+                is WalletUiState.ShowPlans -> showPlans(it.plans)
+                is WalletUiState.ShowWallet -> showWallet(it.wallet)
             }
         }
 
@@ -53,49 +55,57 @@ class WalletFragment : Fragment() {
     }
 
     private fun showPlans(plans: List<LoyaltyPlan>) {
-        walletAdapter.setData(plans)
+        plansAdapter.setData(plans)
         Log.d("Wallet", plans.size.toString())
     }
 
-    private fun showError(exception: Exception?) {
-        val httpException = exception as HttpException
-        if (httpException.code() == 401) {
-            showAlertDialog("It appears that your token is invalid")
-        } else {
-            showAlertDialog("Unexpected error happened")
+    private fun showWallet(wallet: UserWallet){
+        walletAdapter.setData(wallet)
+    }
+
+    private fun onCardClick(item: Any){
+        when(item){
+            is PaymentCard -> {
+                Toast.makeText(requireContext(), item.cardNickname, Toast.LENGTH_LONG).show()
+            }
         }
     }
 
-    private fun showProgress() {
+    private fun showError(exception: Exception?) {
+        val httpException = exception as? HttpException
+
+        if (httpException?.code() ?: 0 == 401) {
+            requireContext().showDialog(
+                title = getString(R.string.error_title),
+                message = getString(R.string.login_invalid_token),
+                positiveBtn = getString(R.string.try_again),
+                negativeBtn = getString(R.string.cancel),
+                positiveCallback = { viewModel.getPlans() },
+                negativeCallback = { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
+        } else {
+            requireContext().showDialog(
+                title = getString(R.string.error_title),
+                message = getString(R.string.unexpected_error),
+                positiveBtn = getString(R.string.try_again),
+                negativeBtn = getString(R.string.cancel),
+                positiveCallback = { viewModel.getPlans() },
+                negativeCallback = { findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment()) })
+        }
 
     }
 
     private fun setupRecyclerView() {
         with(binding) {
+//            rvPlansList.apply {
+//                layoutManager = LinearLayoutManager(context)
+//                adapter = plansAdapter
+//            }
+
             rvPlansList.apply {
                 layoutManager = LinearLayoutManager(context)
                 adapter = walletAdapter
             }
         }
-    }
 
-    private fun showAlertDialog(message:String) {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.apply {
-            setTitle("Something went wrong")
-            setMessage(message)
-            setPositiveButton("Try again ?") { _, _ ->
-                findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToLoginFragment())
-
-            }
-            setCancelable(false)
-            create()
-        }
-        builder.show()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

@@ -1,5 +1,7 @@
 package com.bink.localhero.utils
 
+import java.util.*
+
 fun String.cardValidation(): PaymentCardType {
     if (!isValidLuhnFormat()) {
         return PaymentCardType.NONE
@@ -78,5 +80,65 @@ fun String.presentedCardType(): PaymentCardType {
         }
     }
     return PaymentCardType.NONE
+}
+
+fun String.dateValidation(): Boolean {
+    val new = formatDate()
+    if (new.isNotEmpty()) {
+        val split = new.split(SEPARATOR_SLASH)
+        if (split.size > 1 &&
+            !split[0].isBlank() &&
+            !split[1].isBlank()
+        ) {
+            val month = split[0].toInt()
+            val year = split[1].toInt() + 2000
+            if (month < 1 ||
+                month > 12
+            ) {
+                return false
+            }
+            val cal = Calendar.getInstance()
+            // presuming that a card can't expire more than 10 years in the future
+            // the average expiry is about 3 years, but giving more in case
+            if (year < cal.get(Calendar.YEAR) ||
+                year > cal.get(Calendar.YEAR) + 10
+            ) {
+                return false
+            } else if (year == cal.get(Calendar.YEAR) &&
+                month <= cal.get(Calendar.MONTH)
+            ) {
+                return false
+            }
+            return true
+        }
+    }
+    return false
+}
+
+fun String.formatDate(): String {
+    val builder = StringBuilder()
+    try {
+        val new = replace(REGEX_DECIMAL_OR_SLASH.toRegex(), EMPTY_STRING)
+        if (new.isNotEmpty()) {
+            val parts = new.split(SEPARATOR_SLASH)
+            val year: String
+            var month: String
+            if (parts.size == 1) {
+                val len = kotlin.math.max(0, length - 2)
+                month = new.substring(0, len)
+                year = new.substring(len)
+            } else {
+                month = parts[0]
+                year = parts[1]
+            }
+            month = "00$month"
+            builder.append(month.substring(month.length - 2))
+            builder.append(SEPARATOR_SLASH)
+            builder.append(year)
+        }
+        return builder.toString()
+    } catch (e: StringIndexOutOfBoundsException) {
+        return ""
+    }
 }
 

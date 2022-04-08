@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bink.localhero.databinding.PlanItemBinding
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 
-class WalletAdapter(var planItems: List<LoyaltyPlan>) :
-    RecyclerView.Adapter<WalletAdapter.WalletViewHolder>() {
+class PlansAdapter(var planItems: List<LoyaltyPlan>) :
+    RecyclerView.Adapter<PlansAdapter.WalletViewHolder>() {
 
     fun setData(plans :List<LoyaltyPlan>){
         planItems = plans

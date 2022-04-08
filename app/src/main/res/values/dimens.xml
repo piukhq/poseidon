@@ -10,4 +10,5 @@
     <dimen name="list_item_spacing_half">8dp</dimen>
     <dimen name="margin_26dp">26dp</dimen>
     <dimen name="padding_42dp">42dp</dimen>
+    <dimen name="payment_value_padding">4dp</dimen>
 </resources>
