@@ -40,14 +40,19 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
 
     override fun onMapReady(googleMap: GoogleMap) {
         viewModel.map = googleMap
-        viewModel.getBakeries(requireContext().assets.open("bakeries.json"))
+        viewModel.getBakeries()
     }
 
     override fun onMarkerClick(marker: Marker): Boolean {
         val properties = marker.tag as Properties
         requireContext().showDialog(
             title = properties.locationName,
-            message = "Address: ${properties.streetAddress}\nOpening Hours: ${properties.openHours}",
+            message = "Address: ${properties.streetAddress}\nOpening Hours: ${
+                properties.openHours.replace(
+                    "\\",
+                    ""
+                )
+            }",
             cancelable = true
         )
         return true
