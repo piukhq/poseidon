@@ -1,6 +1,5 @@
 package com.bink.localhero.screens.map
 
-import android.util.Log
 import android.view.LayoutInflater
 import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
@@ -61,7 +60,6 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
             val bakeryLatLng = LatLng(it.geometry.coordinates[1], it.geometry.coordinates[0])
             val marker = map.addMarker(MarkerOptions().position(bakeryLatLng))
             marker?.tag = it.properties
-            Log.d("test123", "${it.properties.openHours} ${it.properties.streetAddress}")
         }
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(viewModel.londonLatLng, 8f))

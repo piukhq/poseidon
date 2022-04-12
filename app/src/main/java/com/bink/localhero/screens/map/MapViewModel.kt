@@ -7,7 +7,8 @@ import com.bink.localhero.model.bakery.Bakeries
 import com.bink.localhero.utils.MapUiState
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.LatLng
-import com.google.gson.Gson
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import java.io.InputStream
 
 class MapViewModel : ViewModel() {
@@ -20,12 +21,15 @@ class MapViewModel : ViewModel() {
         get() = _mapUiState
 
     fun getBakeries(inputStream: InputStream) {
-        val bytes = ByteArray(inputStream.available())
-        inputStream.read(bytes, 0, bytes.size)
-        val string = String(bytes)
-        val json = Gson().fromJson(string, Bakeries::class.java)
-        _mapUiState.value =
-            MapUiState.ShowBakeries(json)
+        val byteArray = ByteArray(inputStream.available())
+        val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+        val adapter = moshi.adapter(Bakeries::class.java)
+
+        inputStream.read(byteArray, 0, byteArray.size)
+        adapter.fromJson(String(byteArray))?.let { bakeries ->
+            _mapUiState.value = MapUiState.ShowBakeries(bakeries)
+        }
+        inputStream.close()
     }
 
 }
