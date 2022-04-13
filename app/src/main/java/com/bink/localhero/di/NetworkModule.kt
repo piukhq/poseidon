@@ -33,11 +33,11 @@ fun provideDefaultOkHttpClient(): OkHttpClient {
             .header("Content-Type", "application/json")
             .header("Authorization", " Bearer $jwtToken")
 
-        if (BuildConfig.BUILD_TYPE != RELEASE_BUILD_TYPE) {
+//        if (BuildConfig.BUILD_TYPE != RELEASE_BUILD_TYPE) {
             newRequest.header("Bink-Test-Auth", Keys.binkTestAuthToken()).url(request)
-        } else {
-            newRequest.url(request)
-        }
+//        } else {
+//            newRequest.url(request)
+//        }
         val response = chain.proceed(newRequest.build())
         response
     }
