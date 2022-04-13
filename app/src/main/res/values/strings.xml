@@ -8,11 +8,6 @@
     <string name="name_on_card">Name on Card</string>
     <string name="nickname">Nickname</string>
     <string name="card_expiry">Expiry (MM/YY)</string>
-    <string name="expiry">Expiry</string>
-    <string name="poseidon_god_mode_title">POSEIDON GOD MODE</string>
-    <string name="add_payment_card_text">Add payment card</string>
-    <string name="settings_text">Settings</string>
-    <string name="cancel_text">Cancel</string>
     <string name="error_title">Error</string>
     <string name="try_again">Try Again</string>
     <string name="cancel">Cancel</string>
