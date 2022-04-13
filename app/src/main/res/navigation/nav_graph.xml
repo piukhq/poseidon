@@ -75,5 +75,5 @@
         <action
             android:id="@+id/action_modalBottomSheet_to_map"
             app:destination="@id/mapFragment" />
-    </dialog
+    </dialog>
 </navigation>
