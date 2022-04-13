@@ -161,5 +161,4 @@ class AddPaymentCardFragment :
         Toast.makeText(requireContext(), "Post Card to Spreedly", Toast.LENGTH_LONG).show()
     }
 
-
 }

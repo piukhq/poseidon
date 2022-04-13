@@ -1,5 +1,6 @@
 package com.bink.localhero.screens.wallet
 
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import androidx.navigation.fragment.findNavController
@@ -50,6 +51,10 @@ class WalletFragment : BaseFragment<WalletViewModel, WalletFragmentBinding>() {
                 is WalletUiState.ShowPlans -> showPlans(it.plans)
                 is WalletUiState.ShowWallet -> showWallet(it.wallet)
             }
+        }
+
+        binding.imgMore.setOnClickListener {
+            findNavController().navigate(WalletFragmentDirections.actionWalletFragmentToModalBottomSheet())
         }
     }
 
