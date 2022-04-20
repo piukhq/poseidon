@@ -7,7 +7,9 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.provider.Settings
 import android.view.LayoutInflater
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.bink.localhero.BuildConfig
 import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
@@ -16,6 +18,8 @@ import com.bink.localhero.model.bakery.Bakeries
 import com.bink.localhero.model.bakery.Properties
 import com.bink.localhero.utils.MapUiState
 import com.bink.localhero.utils.showDialog
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -24,27 +28,56 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.tasks.CancellationTokenSource
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 @SuppressLint("MissingPermission")
 class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReadyCallback,
     GoogleMap.OnMarkerClickListener {
 
-    companion object {
-        const val LOCATION_CODE = 1
-    }
+    private var fusedLocationProvider: FusedLocationProviderClient? = null
+    private lateinit var map: GoogleMap
 
     override val bindingInflater: (LayoutInflater) -> FragmentMapBinding
         get() = FragmentMapBinding::inflate
 
     override val viewModel: MapViewModel by viewModel()
 
+    private val permissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        setMapCurrentLocationSettings()
+        if (isGranted) {
+            getLocation()
+        } else {
+            if (!ActivityCompat.shouldShowRequestPermissionRationale(
+                    requireActivity(),
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                )
+            ) {
+                requireContext().showDialog(
+                    title = getString(R.string.location_permission_settings_title),
+                    message = getString(R.string.location_permission_settings_message),
+                    positiveBtn = getString(R.string.okay),
+                    negativeBtn = getString(R.string.cancel),
+                    positiveCallback = {
+                        startActivity(
+                            Intent(
+                                Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                                Uri.fromParts("package", BuildConfig.APPLICATION_ID, null),
+                            ),
+                        )
+                    })
+            }
+        }
+    }
+
     override fun setup() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
         mapFragment?.getMapAsync(this)
 
-        viewModel.fusedLocationProvider =
-            LocationServices.getFusedLocationProviderClient(requireContext())
+        fusedLocationProvider = LocationServices.getFusedLocationProviderClient(requireContext())
         checkLocationPermission()
     }
 
@@ -56,53 +89,8 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        if (hasLocationPermission()) {
-            viewModel.requestLocationUpdates()
-        }
-    }
-
-    override fun onPause() {
-        super.onPause()
-        if (hasLocationPermission()) {
-            viewModel.removeLocationUpdates()
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
-    ) {
-        when (requestCode) {
-            LOCATION_CODE -> {
-                setMapCurrentLocationSettings()
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (hasLocationPermission()) {
-                        viewModel.requestLocationUpdates()
-                    }
-                } else {
-                    if (!ActivityCompat.shouldShowRequestPermissionRationale(
-                            requireActivity(),
-                            Manifest.permission.ACCESS_FINE_LOCATION
-                        )
-                    ) {
-                        startActivity(
-                            Intent(
-                                Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                                Uri.fromParts("package", BuildConfig.APPLICATION_ID, null),
-                            ),
-                        )
-                    }
-                }
-                return
-            }
-        }
-    }
-
     override fun onMapReady(googleMap: GoogleMap) {
-        viewModel.map = googleMap
+        map = googleMap
         viewModel.getBakeries()
         setMapCurrentLocationSettings()
     }
@@ -123,8 +111,6 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
     }
 
     private fun displayBakeries(bakeries: Bakeries) {
-        val map = viewModel.map
-
         bakeries.features.forEach {
             val bakeryLatLng = LatLng(it.geometry.coordinates[1], it.geometry.coordinates[0])
             val marker = map.addMarker(MarkerOptions().position(bakeryLatLng))
@@ -154,25 +140,42 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
         }
     }
 
+    private fun getLocation() {
+        fusedLocationProvider?.getCurrentLocation(
+            LocationRequest.PRIORITY_HIGH_ACCURACY,
+            CancellationTokenSource().token
+        )?.addOnSuccessListener { location ->
+            map.animateCamera(
+                CameraUpdateFactory.newLatLngZoom(
+                    LatLng(
+                        location.latitude,
+                        location.longitude
+                    ), 10f
+                )
+            )
+        }
+    }
+
     private fun requestLocationPermission() {
-        ActivityCompat.requestPermissions(
-            requireActivity(),
-            arrayOf(
-                Manifest.permission.ACCESS_FINE_LOCATION,
-            ),
-            LOCATION_CODE
-        )
+        permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
     }
 
     private fun setMapCurrentLocationSettings() {
         if (!hasLocationPermission()) {
-            viewModel.map.isMyLocationEnabled = false
-            viewModel.map.uiSettings.isMyLocationButtonEnabled = false
+            map.isMyLocationEnabled = false
+            map.uiSettings.isMyLocationButtonEnabled = false
         } else {
-            viewModel.map.isMyLocationEnabled = true
-            viewModel.map.uiSettings.isMyLocationButtonEnabled = true
+            map.isMyLocationEnabled = true
+            map.uiSettings.isMyLocationButtonEnabled = true
+            getLocation()
         }
     }
+
+    private fun hasLocationPermission(): Boolean =
+        ContextCompat.checkSelfPermission(
+            requireContext(),
+            Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
 
 
 }
