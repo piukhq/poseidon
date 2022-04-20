@@ -7,11 +7,11 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Transaction(
     @Json(name = "description")
-    val description: String,
+    val description: String?,
     @Json(name = "display_value")
-    val displayValue: String,
+    val displayValue: String?,
     @Json(name = "id")
-    val id: String,
+    val id: String?,
     @Json(name = "timestamp")
-    val timestamp: Int
+    val timestamp: Int?
 )

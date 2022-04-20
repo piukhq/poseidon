@@ -7,11 +7,11 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Card(
     @Json(name = "barcode")
-    val barcode: String,
+    val barcode: String?,
     @Json(name = "barcode_type")
-    val barcodeType: Int,
+    val barcodeType: Int?,
     @Json(name = "card_number")
-    val cardNumber: String,
+    val cardNumber: String?,
     @Json(name = "colour")
-    val colour: String
+    val colour: String?
 )

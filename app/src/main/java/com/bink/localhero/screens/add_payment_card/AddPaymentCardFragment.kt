@@ -8,7 +8,6 @@ import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.FragmentAddPaymentCardBinding
 import com.bink.localhero.model.payment_account.PaymentAccount
-import com.bink.localhero.screens.wallet.WalletFragmentDirections
 import com.bink.localhero.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -110,7 +109,7 @@ class AddPaymentCardFragment :
     }
 
     private fun goToWallet() {
-        findNavController().navigate(AddPaymentCardFragmentDirections.actionAddPaymentCardToWallet())
+        findNavController().popBackStack()
     }
 
     private fun checkAddBtnEnable() {

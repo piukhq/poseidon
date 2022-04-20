@@ -1,5 +1,6 @@
 package com.bink.localhero.utils
 
+import com.bink.localhero.model.bakery.Bakeries
 import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 import com.bink.localhero.model.wallet.UserWallet
 
@@ -14,4 +15,9 @@ sealed class AddPaymentCardUiState {
     object Loading : AddPaymentCardUiState()
     data class Error(val exception: Exception?) : AddPaymentCardUiState()
     object Success : AddPaymentCardUiState()
+}
+
+
+sealed class MapUiState {
+    data class ShowBakeries(val bakeries: Bakeries) : MapUiState()
 }

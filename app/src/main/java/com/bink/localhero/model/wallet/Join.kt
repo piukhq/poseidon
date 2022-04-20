@@ -7,9 +7,9 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Join(
     @Json(name = "loyalty_card_id")
-    val loyaltyCardId: Int,
+    val loyaltyCardId: Int?,
     @Json(name = "loyalty_plan_id")
-    val loyaltyPlanId: Int,
+    val loyaltyPlanId: Int?,
     @Json(name = "status")
-    val status: Status
+    val status: Status?
 )

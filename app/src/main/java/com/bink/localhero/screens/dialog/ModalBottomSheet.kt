@@ -27,6 +27,10 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
         binding.tvAddPaymentCard.setOnClickListener {
             findNavController().navigate(ModalBottomSheetDirections.actionModalBottomSheetToAddPaymentCardFragment())
         }
+        
+        binding.tvLocations.setOnClickListener {
+            findNavController().navigate(ModalBottomSheetDirections.actionModalBottomSheetToMap())
+        }
     }
 
     override fun onDestroyView() {

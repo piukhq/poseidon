@@ -25,10 +25,10 @@ class WalletViewModel(private val walletRepository: WalletRepository) : ViewMode
         }
     }
 
-    fun getWallet(){
+    fun getWallet() {
         _walletUiState.value = WalletUiState.Loading
         viewModelScope.launch {
-            try{
+            try {
                 val wallet = walletRepository.getWallet()
                 _walletUiState.value = WalletUiState.ShowWallet(wallet)
             } catch (e: Exception) {

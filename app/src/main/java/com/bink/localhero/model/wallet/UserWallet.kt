@@ -1,6 +1,8 @@
 package com.bink.localhero.model.wallet
 
 
+import com.bink.localhero.utils.LOYALTY_HEADER
+import com.bink.localhero.utils.PAYMENT_HEADER
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -14,10 +16,15 @@ data class UserWallet(
     val paymentAccounts: List<PaymentCard>
 )
 
-fun UserWallet.asList() : List<Any>{
+fun UserWallet.asList(): List<Any> {
     return ArrayList<Any>().apply {
-        addAll(joins)
-        addAll(loyaltyCards)
-        addAll(paymentAccounts)
+        if (loyaltyCards.isNotEmpty()) {
+            add(LOYALTY_HEADER)
+            addAll(loyaltyCards)
+        }
+        if (paymentAccounts.isNotEmpty()) {
+            add(PAYMENT_HEADER)
+            addAll(paymentAccounts)
+        }
     }
 }

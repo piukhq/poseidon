@@ -9,7 +9,7 @@ import com.bink.localhero.model.loyalty_plan.LoyaltyPlan
 class PlansAdapter(var planItems: List<LoyaltyPlan>) :
     RecyclerView.Adapter<PlansAdapter.WalletViewHolder>() {
 
-    fun setData(plans :List<LoyaltyPlan>){
+    fun setData(plans: List<LoyaltyPlan>) {
         planItems = plans
         notifyDataSetChanged()
     }
