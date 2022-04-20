@@ -7,6 +7,7 @@ import com.bink.localhero.screens.add_payment_card.AddPaymentCardViewModel
 import com.bink.localhero.screens.map.MapViewModel
 import com.bink.localhero.screens.wallet.WalletRepository
 import com.bink.localhero.screens.wallet.WalletViewModel
+import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -22,7 +23,7 @@ val viewModelModule = module {
 
     viewModel { WalletViewModel(get()) }
     viewModel { AddPaymentCardViewModel(get()) }
-    viewModel { MapViewModel() }
+    viewModel { MapViewModel(androidApplication()) }
 }
 
 fun provideWalletRepository(apiService: ApiService): WalletRepository = WalletRepository(apiService)

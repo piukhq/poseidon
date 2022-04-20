@@ -8,7 +8,7 @@ sealed class WalletUiState {
     object Loading : WalletUiState()
     data class Error(val exception: Exception?) : WalletUiState()
     data class ShowPlans(val plans: List<LoyaltyPlan>) : WalletUiState()
-    data class ShowWallet(val wallet: UserWallet): WalletUiState()
+    data class ShowWallet(val wallet: UserWallet) : WalletUiState()
 }
 
 sealed class AddPaymentCardUiState {
@@ -20,4 +20,5 @@ sealed class AddPaymentCardUiState {
 
 sealed class MapUiState {
     data class ShowBakeries(val bakeries: Bakeries) : MapUiState()
+    object Error : MapUiState()
 }
