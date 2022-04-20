@@ -13,7 +13,8 @@ class PaymentCardViewHolder(
 
     override fun bind(item: PaymentCard, isLastItem: Boolean) {
         with(binding) {
-            tvNameOnCard.text = item.nameOnCard ?: item.cardNickname
+            tvNameOnCard.text =
+                if (!item.cardNickname.isNullOrBlank()) "${item.cardNickname} / ${item.nameOnCard}" else item.nameOnCard
             tvLastFourDigits.text = "**** ${item.lastFourDigits}"
             tvProvider.text = item.provider
 
