@@ -24,7 +24,7 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
             if (binding.etTokenValue.text.isNullOrEmpty()) {
                 Toast.makeText(
                     requireContext(),
-                    "Enter a token before proceding",
+                    "Enter a token before proceeding",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
