@@ -32,7 +32,7 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
                     LocalStoreUtils.KEY_TOKEN,
                     binding.etTokenValue.text.toString()
                 )
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToScanBarcodeFragment())
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWalletFragment())
 
             }
         }
