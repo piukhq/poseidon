@@ -19,4 +19,6 @@
     <string name="add_payment_card_text">Add payment card</string>
     <string name="settings_text">Settings</string>
     <string name="cancel_text">Cancel</string>
+    <string name="enter_token">Enter token</string>
+    <string name="token_button_go">Go!</string>
 </resources>
