@@ -2,7 +2,6 @@ package com.bink.localhero.screens.login
 
 import android.view.LayoutInflater
 import android.widget.Toast
-import androidx.core.view.isEmpty
 import androidx.navigation.fragment.findNavController
 import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.FragmentLoginBinding
