@@ -51,13 +51,4 @@ object LocalStoreUtils {
             it.apply()
         }
     }
-
-    fun clearPreferences(context: Context) {
-        SharedPreferenceManager.clear()
-        encryptedSharedPreferences.edit().let {
-            it.clear()
-            it.apply()
-            it.commit()
-        }
-    }
 }
