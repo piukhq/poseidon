@@ -21,4 +21,9 @@
     <string name="cancel_text">Cancel</string>
     <string name="enter_token">Enter token</string>
     <string name="token_button_go">Go!</string>
+    <string name="okay">Okay</string>
+    <string name="change_environment_title">Change Environment</string>
+    <string name="logout">Logout</string>
+    <string name="logout_desc">Remove token from secure storage etc.</string>
+    <string name="current_login_title">Current Login</string>
 </resources>

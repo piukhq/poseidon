@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:text="@string/settings_text"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/settings_title" />
 
     </Toolbar>
 
@@ -28,7 +28,7 @@
         android:id="@+id/li_current_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/settings_page_margin"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,16 +38,15 @@
             android:id="@+id/tv_current_login_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Current Login"
+            android:text="@string/current_login_title"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_page_title" />
 
         <TextView
             android:id="@+id/tv_current_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test@test.com"
-            android:textSize="14sp" />
+            android:textSize="@dimen/settings_page_subtitle" />
 
         <ImageView
             android:id="@+id/iv_barcode"
@@ -60,8 +59,7 @@
         android:id="@+id/li_change_environment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="228dp"
+        android:layout_margin="@dimen/settings_page_margin"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,31 +69,30 @@
         <View
             android:id="@+id/vw_splitter"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/splitter_height"
             android:background="@color/header_grey" />
 
         <TextView
             android:id="@+id/tv_change_environment_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Change Environment"
+            android:layout_marginTop="@dimen/settings_middle_margin"
+            android:text="@string/change_environment_title"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_page_title" />
 
         <TextView
             android:id="@+id/tv_change_environment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="api.test.com"
-            android:textSize="14sp" />
+            android:layout_marginBottom="@dimen/settings_middle_margin"
+            android:textSize="@dimen/settings_page_subtitle" />
 
 
         <View
             android:id="@+id/vw_splitter_two"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/splitter_height"
             android:background="@color/header_grey" />
     </LinearLayout>
 
@@ -104,7 +101,7 @@
         android:id="@+id/li_logout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/settings_page_margin"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,16 +111,16 @@
             android:id="@+id/tv_logout_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="@string/logout"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_page_title" />
 
         <TextView
             android:id="@+id/tv_logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Remove token from secure storage etc."
-            android:textSize="14sp" />
+            android:text="@string/logout_desc"
+            android:textSize="@dimen/settings_page_subtitle" />
     </LinearLayout>
 
 

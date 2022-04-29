@@ -2,6 +2,7 @@ package com.bink.localhero.screens.settings
 
 import android.app.AlertDialog
 import android.view.LayoutInflater
+import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.base.MainActivity
 import com.bink.localhero.databinding.FragmentSettingsBinding
@@ -50,14 +51,14 @@ class SettingsFragment : BaseFragment<SettingsViewModel, FragmentSettingsBinding
         }
 
         adb.setPositiveButton(
-            "Ok"
+            getString(R.string.okay)
         ) { _, _ ->
             when (selection) {
                 0 -> SharedPreferenceManager.storedApiUrl = ApiEnvironment.DEV.url
                 1 -> SharedPreferenceManager.storedApiUrl = ApiEnvironment.STAGING.url
             }
         }
-        adb.setNegativeButton("Cancel", null)
+        adb.setNegativeButton(getString(R.string.cancel), null)
         adb.show()
     }
 }

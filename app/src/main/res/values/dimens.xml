@@ -12,4 +12,10 @@
     <dimen name="payment_value_padding">4dp</dimen>
     <dimen name="wallet_header_size">25sp</dimen>
     <dimen name="padding_42dp">42dp</dimen>
+    <dimen name="settings_page_margin">16dp</dimen>
+    <dimen name="splitter_height">1dp</dimen>
+    <dimen name="settings_page_title">16sp</dimen>
+    <dimen name="settings_page_subtitle">14sp</dimen>
+    <dimen name="settings_title">20sp</dimen>
+    <dimen name="settings_middle_margin">10dp</dimen>
 </resources>
