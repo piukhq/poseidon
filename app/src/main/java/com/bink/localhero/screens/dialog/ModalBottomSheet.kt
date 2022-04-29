@@ -32,6 +32,10 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
             findNavController().navigate(ModalBottomSheetDirections.actionModalBottomSheetToMap())
         }
 
+        binding.tvSettings.setOnClickListener {
+            findNavController().navigate(ModalBottomSheetDirections.actionModalBottomSheetToSettings())
+        }
+
     }
 
     override fun onDestroyView() {
