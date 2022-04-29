@@ -68,6 +68,13 @@
         tools:layout="@layout/fragment_map">
     </fragment>
 
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.bink.localhero.screens.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+    </fragment>
+
     <dialog
         android:id="@+id/modalBottomSheet"
         android:name="com.bink.localhero.screens.dialog.ModalBottomSheet"
@@ -78,6 +85,9 @@
         <action
             android:id="@+id/action_modalBottomSheet_to_map"
             app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_modalBottomSheet_to_settings"
+            app:destination="@id/settingsFragment" />
       
     </dialog>
 </navigation>

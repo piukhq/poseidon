@@ -1,6 +1,5 @@
 package com.bink.localhero.screens.wallet
 
-import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import androidx.navigation.fragment.findNavController
