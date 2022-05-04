@@ -28,13 +28,13 @@ class SettingsFragment : BaseFragment<SettingsViewModel, FragmentSettingsBinding
                 ivBarcode.setImageBitmap(loginJWT.toQRCode())
             }
 
-            liChangeEnvironment.setOnClickListener {
+            tvChangeEnvironmentTitle.setOnClickListener {
                 displayEnvironmentPicker()
             }
 
             tvChangeEnvironment.text = SharedPreferenceManager.storedApiUrl
 
-            liLogout.setOnClickListener {
+            tvLogoutTitle.setOnClickListener {
                 (requireActivity() as MainActivity).forceRunApp()
             }
         }
