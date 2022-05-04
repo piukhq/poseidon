@@ -57,6 +57,8 @@ class SettingsFragment : BaseFragment<SettingsViewModel, FragmentSettingsBinding
                 0 -> SharedPreferenceManager.storedApiUrl = ApiEnvironment.DEV.url
                 1 -> SharedPreferenceManager.storedApiUrl = ApiEnvironment.STAGING.url
             }
+
+            (requireActivity() as MainActivity).forceRunApp()
         }
         adb.setNegativeButton(getString(R.string.cancel), null)
         adb.show()
