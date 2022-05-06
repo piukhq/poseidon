@@ -65,6 +65,20 @@
         tools:layout="@layout/fragment_map">
     </fragment>
 
+    <fragment
+        android:id="@+id/mapCompose"
+        android:name="com.bink.localhero.screens.map.MapCompose"
+        android:label="fragment_map_compose"
+        tools:layout="@layout/fragment_map_compose">
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.bink.localhero.screens.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+    </fragment>
+
     <dialog
         android:id="@+id/modalBottomSheet"
         android:name="com.bink.localhero.screens.dialog.ModalBottomSheet"
@@ -74,7 +88,10 @@
             app:destination="@id/addPaymentCardFragment" />
         <action
             android:id="@+id/action_modalBottomSheet_to_map"
-            app:destination="@id/mapFragment" />
+            app:destination="@id/mapCompose" />
+        <action
+            android:id="@+id/action_modalBottomSheet_to_settings"
+            app:destination="@id/settingsFragment" />
       
     </dialog>
 </navigation>
