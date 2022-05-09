@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_splashFragment_to_wallet"
             app:destination="@id/walletFragment" />
-        <action
-            android:id="@+id/test"
-            app:destination="@id/mapCompose" />
     </fragment>
   
     <fragment
@@ -59,13 +56,6 @@
         android:name="com.bink.localhero.screens.add_payment_card.AddPaymentCardFragment"
         android:label="fragment_add_payment_card"
         tools:layout="@layout/fragment_add_payment_card">
-    </fragment>
-
-    <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.bink.localhero.screens.map.MapFragment"
-        android:label="fragment_map"
-        tools:layout="@layout/fragment_map">
     </fragment>
 
     <fragment

@@ -16,8 +16,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>() {
 
     override fun setup() {
         if (LocalStoreUtils.getAppSharedPref(LocalStoreUtils.KEY_TOKEN) != null) {
-            //findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToWallet())
-            findNavController().navigate(SplashFragmentDirections.test())
+            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToWallet())
         } else {
             findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
         }
