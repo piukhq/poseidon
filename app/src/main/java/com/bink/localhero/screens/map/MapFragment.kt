@@ -117,7 +117,7 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
             marker?.tag = it.properties
         }
 
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(viewModel.londonLatLng, 8f))
+       // map.animateCamera(CameraUpdateFactory.newLatLngZoom(viewModel.londonLatLng, 8f))
         map.setOnMarkerClickListener(this)
     }
 
