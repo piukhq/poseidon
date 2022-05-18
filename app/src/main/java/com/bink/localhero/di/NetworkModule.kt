@@ -49,7 +49,7 @@ fun provideDefaultOkHttpClient(): OkHttpClient {
 
 fun provideRetrofit(client: OkHttpClient): Retrofit {
     val retrofitBuilder = Retrofit.Builder()
-        .baseUrl(BASE_URL)
+        .baseUrl(SharedPreferenceManager.storedApiUrl.toString())
         .addConverterFactory(MoshiConverterFactory.create())
         .client(client)
 
