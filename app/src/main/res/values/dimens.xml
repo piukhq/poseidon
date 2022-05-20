@@ -12,6 +12,5 @@
     <dimen name="payment_value_padding">4dp</dimen>
     <dimen name="wallet_header_size">25sp</dimen>
     <dimen name="padding_42dp">42dp</dimen>
-    <dimen name="payment_value_padding">4dp</dimen>
-    <dimen name="wallet_header_size">25sp</dimen>
+
 </resources>
