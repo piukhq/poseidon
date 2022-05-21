@@ -3,18 +3,16 @@ package com.bink.localhero.screens.map
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import android.content.IntentSender
 import android.content.pm.PackageManager
 import android.location.LocationManager
-import android.net.Uri
+import android.os.Build
 import android.os.Looper
-import android.provider.Settings
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.bink.localhero.BuildConfig
 import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.FragmentMapBinding
@@ -35,14 +33,15 @@ import com.google.android.gms.tasks.CancellationTokenSource
 import com.google.android.gms.tasks.Task
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
+@SuppressLint("MissingPermission")
 class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReadyCallback,
     GoogleMap.OnMarkerClickListener {
 
     private var fusedLocationProvider: FusedLocationProviderClient? = null
     private lateinit var map: GoogleMap
     private lateinit var locationRequest: LocationRequest
-    companion object{
+
+    companion object {
         private const val REQUEST_CHECK_SETTINGS = 100
     }
 
@@ -52,35 +51,60 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
     override val viewModel: MapViewModel by viewModel()
 
     private val permissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        setMapCurrentLocationSettings()
-        if (isGranted) {
-            getLocation()
-        } else {
-            if (!ActivityCompat.shouldShowRequestPermissionRationale(
-                    requireActivity(),
-                    Manifest.permission.ACCESS_FINE_LOCATION
-                )
-            ) {
-                requireContext().showDialog(
-                    title = getString(R.string.location_permission_settings_title),
-                    message = getString(R.string.location_permission_settings_message),
-                    positiveBtn = getString(R.string.okay),
-                    negativeBtn = getString(R.string.cancel),
-                    positiveCallback = {
-                        startActivity(
-                            Intent(
-                                Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                                Uri.fromParts("package", BuildConfig.APPLICATION_ID, null),
-                            ),
-                        )
-                    })
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+
+        when {
+            permissions.get(Manifest.permission.ACCESS_FINE_LOCATION) ?: false -> {
+                // Precise location access granted.
+                if (isGpsTurnedOn()) {
+                    getLocation()
+                } else {
+                    turnOnLocation()
+                }
+            }
+            permissions.get(Manifest.permission.ACCESS_COARSE_LOCATION) ?: false -> {
+                // Only approximate location access granted.
+                if (isGpsTurnedOn()) {
+                    getLocation()
+                } else {
+                    turnOnLocation()
+                }
+            }
+            else -> {
+                // No location access granted.
+                Log.d("MapFragment", "No location permission granted")
             }
         }
+
+        setMapCurrentLocationSettings()
+
+//        if (isGranted) {
+//            getLocation()
+//        } else {
+//            if (!ActivityCompat.shouldShowRequestPermissionRationale(
+//                    requireActivity(),
+//                    Manifest.permission.ACCESS_FINE_LOCATION
+//                )
+//            ) {
+//                requireContext().showDialog(
+//                    title = getString(R.string.location_permission_settings_title),
+//                    message = getString(R.string.location_permission_settings_message),
+//                    positiveBtn = getString(R.string.okay),
+//                    negativeBtn = getString(R.string.cancel),
+//                    positiveCallback = {
+//                        startActivity(
+//                            Intent(
+//                                Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+//                                Uri.fromParts("package", BuildConfig.APPLICATION_ID, null),
+//                            ),
+//                        )
+//                    })
+//            }
+//        }
     }
 
-    private val locationCallback : LocationCallback = object : LocationCallback() {
+    private val locationCallback: LocationCallback = object : LocationCallback() {
         override fun onLocationResult(p0: LocationResult) {
             super.onLocationResult(p0)
         }
@@ -101,6 +125,11 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
         }
 
+//        turnOnLocation()
+        checkLocationPermission()
+    }
+
+    private fun turnOnLocation() {
         val builder = LocationSettingsRequest.Builder()
             .addLocationRequest(locationRequest)
 
@@ -115,20 +144,21 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
         }
 
         task.addOnFailureListener { exception ->
-            if (exception is ResolvableApiException){
+            if (exception is ResolvableApiException) {
                 // Location settings are not satisfied, but this can be fixed
                 // by showing the user a dialog.
                 try {
                     // Show the dialog by calling startResolutionForResult(),
                     // and check the result in onActivityResult().
-                    exception.startResolutionForResult(requireActivity(),
-                        REQUEST_CHECK_SETTINGS)
+                    exception.startResolutionForResult(
+                        requireActivity(),
+                        REQUEST_CHECK_SETTINGS
+                    )
                 } catch (sendEx: IntentSender.SendIntentException) {
                     // Ignore the error.
                 }
             }
         }
-        checkLocationPermission()
     }
 
     override fun observeViewModel() {
@@ -187,28 +217,43 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
             } else {
                 requestLocationPermission()
             }
+        } else {
+            requestLocationPermission()
+
         }
     }
 
     private fun getLocation() {
-        fusedLocationProvider?.requestLocationUpdates(locationRequest,locationCallback, Looper.getMainLooper())
+        fusedLocationProvider?.requestLocationUpdates(
+            locationRequest,
+            locationCallback,
+            Looper.getMainLooper()
+        )
         fusedLocationProvider?.getCurrentLocation(
             LocationRequest.PRIORITY_HIGH_ACCURACY,
             CancellationTokenSource().token
         )?.addOnSuccessListener { location ->
-            map.animateCamera(
-                CameraUpdateFactory.newLatLngZoom(
-                    LatLng(
-                        location.latitude,
-                        location.longitude
-                    ), 10f
+            location?.let {
+                map.animateCamera(
+                    CameraUpdateFactory.newLatLngZoom(
+                        LatLng(
+                            location.latitude,
+                            location.longitude
+                        ), 10f
+                    )
                 )
-            )
+            }
+
         }
     }
 
     private fun requestLocationPermission() {
-        permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+        permissionLauncher.launch(
+            arrayOf(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            )
+        )
     }
 
     private fun setMapCurrentLocationSettings() {
