@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.IntentSender
 import android.content.pm.PackageManager
 import android.location.LocationManager
-import android.os.Build
 import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
@@ -57,19 +56,11 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
         when {
             permissions.get(Manifest.permission.ACCESS_FINE_LOCATION) ?: false -> {
                 // Precise location access granted.
-                if (isGpsTurnedOn()) {
-                    getLocation()
-                } else {
-                    turnOnLocation()
-                }
+                manageLocation()
             }
             permissions.get(Manifest.permission.ACCESS_COARSE_LOCATION) ?: false -> {
                 // Only approximate location access granted.
-                if (isGpsTurnedOn()) {
-                    getLocation()
-                } else {
-                    turnOnLocation()
-                }
+                manageLocation()
             }
             else -> {
                 // No location access granted.
@@ -78,32 +69,12 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
         }
 
         setMapCurrentLocationSettings()
-
-//        if (isGranted) {
-//            getLocation()
-//        } else {
-//            if (!ActivityCompat.shouldShowRequestPermissionRationale(
-//                    requireActivity(),
-//                    Manifest.permission.ACCESS_FINE_LOCATION
-//                )
-//            ) {
-//                requireContext().showDialog(
-//                    title = getString(R.string.location_permission_settings_title),
-//                    message = getString(R.string.location_permission_settings_message),
-//                    positiveBtn = getString(R.string.okay),
-//                    negativeBtn = getString(R.string.cancel),
-//                    positiveCallback = {
-//                        startActivity(
-//                            Intent(
-//                                Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-//                                Uri.fromParts("package", BuildConfig.APPLICATION_ID, null),
-//                            ),
-//                        )
-//                    })
-//            }
-//        }
     }
 
+    /**
+     * We'll use this these methods to receive location updates
+     * Need to clarify use case oas this might not be needed
+     */
     private val locationCallback: LocationCallback = object : LocationCallback() {
         override fun onLocationResult(p0: LocationResult) {
             super.onLocationResult(p0)
@@ -120,15 +91,18 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
 
         fusedLocationProvider = LocationServices.getFusedLocationProviderClient(requireContext())
         locationRequest = LocationRequest.create().apply {
-            interval = 10000
+            interval = 6000
             fastestInterval = 5000
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
         }
 
-//        turnOnLocation()
         checkLocationPermission()
     }
 
+    /**
+     * This method shows the dialog to the user to turn on location
+     * Removing the need to go to settings
+     */
     private fun turnOnLocation() {
         val builder = LocationSettingsRequest.Builder()
             .addLocationRequest(locationRequest)
@@ -274,12 +248,24 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>(), OnMapReady
         ) == PackageManager.PERMISSION_GRANTED
 
 
-    private fun isGpsTurnedOn(): Boolean {
+    private fun isLocationTurnedOn(): Boolean {
         // Calling Location Manager
         val mLocationManager =
             requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        // Checking GPS is enabled
+        // Checking location is enabled
         return mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+    }
+
+    /** This checks whether the location is turned on on the device
+     *  If location is turned on, we display the user's location
+     *  Otherwise, show the location dialog
+     */
+    private fun manageLocation() {
+        if (isLocationTurnedOn()) {
+            getLocation()
+        } else {
+            turnOnLocation()
+        }
     }
 }
