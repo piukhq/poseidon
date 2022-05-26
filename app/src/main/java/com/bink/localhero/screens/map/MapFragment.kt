@@ -6,20 +6,17 @@ import android.content.Context
 import android.content.IntentSender
 import android.content.pm.PackageManager
 import android.location.LocationManager
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.bink.localhero.R
 import com.bink.localhero.base.BaseFragment
 import com.bink.localhero.databinding.FragmentMapBinding
 import com.bink.localhero.model.bakery.Properties
-import com.bink.localhero.utils.MapUiState
 import com.bink.localhero.utils.showDialog
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -38,11 +35,14 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
 
     companion object {
         private const val REQUEST_CHECK_SETTINGS = 100
+        private const val LOCATION_REQUEST_INTERVAL: Long = 5000
     }
 
     private var fusedLocationProvider: FusedLocationProviderClient? = null
     private val mapProperties = mutableStateOf(MapProperties(isMyLocationEnabled = false))
     private val uiSettings = mutableStateOf(MapUiSettings(myLocationButtonEnabled = false))
+
+    //Defaulted to London
     private val cameraPositionState = mutableStateOf(
         CameraPositionState(
             position = CameraPosition.fromLatLngZoom(
@@ -54,32 +54,19 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
         )
     )
 
-    private val permissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) { permissions ->
+    private val permissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
+            when {
+                permissions[Manifest.permission.ACCESS_FINE_LOCATION] ?: false -> {
+                    manageLocation()
+                }
+                permissions[Manifest.permission.ACCESS_COARSE_LOCATION] ?: false -> {
+                    manageLocation()
+                }
+            }
 
-        when {
-            permissions.get(Manifest.permission.ACCESS_FINE_LOCATION) ?: false -> {
-                // Precise location access granted.
-                manageLocation()
-            }
-            permissions.get(Manifest.permission.ACCESS_COARSE_LOCATION) ?: false -> {
-                // Only approximate location access granted.
-                manageLocation()
-            }
-            else -> {
-                // No location access granted.
-                Log.d("MapFragment", "No location permission granted")
-            }
+            setMapCurrentLocationSettings()
         }
-
-        setMapCurrentLocationSettings()
-    }
-
-    private fun isLocationTurnedOn(): Boolean =
-        (requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager).isProviderEnabled(
-            LocationManager.GPS_PROVIDER
-        )
 
     override val bindingInflater: (LayoutInflater) -> FragmentMapBinding
         get() = FragmentMapBinding::inflate
@@ -88,8 +75,8 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
 
     override fun setup() {
         viewModel.getBakeries()
+
         fusedLocationProvider = LocationServices.getFusedLocationProviderClient(requireContext())
-        setMapCurrentLocationSettings()
         checkLocationPermission()
 
         binding.compose.setContent {
@@ -133,21 +120,17 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
         }
     }
 
-
-    /**
-     * This method shows the dialog to the user to turn on location
-     * Removing the need to go to settings
-     */
     private fun turnOnLocation() {
-        val builder = LocationSettingsRequest.Builder()
-            .addLocationRequest(LocationRequest.create().apply {
+        val builder =
+            LocationSettingsRequest.Builder().addLocationRequest(LocationRequest.create().apply {
+                interval = LOCATION_REQUEST_INTERVAL
                 priority = LocationRequest.PRIORITY_HIGH_ACCURACY
             })
         val client = LocationServices.getSettingsClient(requireContext())
         val task = client.checkLocationSettings(builder.build())
 
         task.addOnSuccessListener {
-            manageLocation()
+
         }
 
         task.addOnFailureListener { exception ->
@@ -163,18 +146,8 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
         }
     }
 
-    override fun observeViewModel() {
-        viewModel.mapUiState.observe(viewLifecycleOwner) {
-            when (it) {
-                is MapUiState.Error -> {
-                    //Error Dialog
-                }
-            }
-        }
-    }
-
     private fun checkLocationPermission() {
-        if (hasLocationPermission()) {
+        if (!hasLocationPermission()) {
             if (shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION) ||
                 shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_COARSE_LOCATION)
             ) {
@@ -208,32 +181,26 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
         }
     }
 
-
     private fun requestLocationPermission() {
-        permissionLauncher.launch(arrayOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION))
+        permissionLauncher.launch(
+            arrayOf(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            )
+        )
     }
 
     private fun setMapCurrentLocationSettings() {
         if (hasLocationPermission()) {
             mapProperties.value = MapProperties(isMyLocationEnabled = true)
             uiSettings.value = MapUiSettings(myLocationButtonEnabled = true)
-            manageLocation()
+            getLocation()
         } else {
             mapProperties.value = MapProperties(isMyLocationEnabled = false)
             uiSettings.value = MapUiSettings(myLocationButtonEnabled = false)
         }
     }
 
-    private fun hasLocationPermission(): Boolean =
-        ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
-
-    /** This checks whether the location is turned on on the device
-     *  If location is turned on, we display the user's location
-     *  Otherwise, show the location dialog
-     */
     private fun manageLocation() {
         if (isLocationTurnedOn()) {
             getLocation()
@@ -241,4 +208,18 @@ class MapFragment : BaseFragment<MapViewModel, FragmentMapBinding>() {
             turnOnLocation()
         }
     }
+
+    private fun hasLocationPermission(): Boolean =
+        ContextCompat.checkSelfPermission(
+            requireContext(), Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
+
+
+    private fun isLocationTurnedOn(): Boolean =
+        (requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager)
+            .isProviderEnabled(LocationManager.GPS_PROVIDER)
 }
