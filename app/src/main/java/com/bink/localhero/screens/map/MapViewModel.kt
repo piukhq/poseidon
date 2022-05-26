@@ -1,6 +1,8 @@
 package com.bink.localhero.screens.map
 
 import android.app.Application
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,13 +16,11 @@ import java.io.IOException
 
 class MapViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val _londonLatLng = LatLng(51.54, -0.14)
-    val londonLatLng: LatLng
-        get() = _londonLatLng
-
     private val _mapUiState = MutableLiveData<MapUiState>()
     val mapUiState: LiveData<MapUiState>
         get() = _mapUiState
+
+    val mutableBakeries : MutableState<Bakeries?> = mutableStateOf(null)
 
     fun getBakeries() {
         try {
@@ -31,11 +31,10 @@ class MapViewModel(app: Application) : AndroidViewModel(app) {
                     .use { it.readText() }
 
             adapter.fromJson(jsonString)?.let { bakeries ->
-                _mapUiState.value = MapUiState.ShowBakeries(bakeries)
+                mutableBakeries.value = bakeries
             }
         } catch (e: IOException) {
             _mapUiState.value = MapUiState.Error
         }
     }
-
 }

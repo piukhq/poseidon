@@ -19,6 +19,5 @@ sealed class AddPaymentCardUiState {
 
 
 sealed class MapUiState {
-    data class ShowBakeries(val bakeries: Bakeries) : MapUiState()
     object Error : MapUiState()
 }
