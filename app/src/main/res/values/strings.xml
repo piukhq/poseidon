@@ -19,4 +19,9 @@
     <string name="add_payment_card_text">Add payment card</string>
     <string name="settings_text">Settings</string>
     <string name="cancel_text">Cancel</string>
+    <string name="okay">Okay</string>
+    <string name="location_permission_message">The Local Hero app needs your location for this functionality</string>
+    <string name="location_permission_title">Location Permission Needed</string>
+    <string name="location_permission_settings_message">The Local Hero app needs your location for this functionality, this will take you to your settings</string>
+    <string name="location_permission_settings_title">Location Permission Needed</string>
 </resources>
